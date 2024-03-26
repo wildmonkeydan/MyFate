@@ -1,0 +1,8 @@
+C:/PSn00bSDK/projects/MyFate/build/CMakeFiles/hellocpp.dir
+C:/PSn00bSDK/projects/MyFate/build/CMakeFiles/hellocpp_iso.dir
+C:/PSn00bSDK/projects/MyFate/build/CMakeFiles/edit_cache.dir
+C:/PSn00bSDK/projects/MyFate/build/CMakeFiles/rebuild_cache.dir
+C:/PSn00bSDK/projects/MyFate/build/CMakeFiles/list_install_components.dir
+C:/PSn00bSDK/projects/MyFate/build/CMakeFiles/install.dir
+C:/PSn00bSDK/projects/MyFate/build/CMakeFiles/install/local.dir
+C:/PSn00bSDK/projects/MyFate/build/CMakeFiles/install/strip.dir

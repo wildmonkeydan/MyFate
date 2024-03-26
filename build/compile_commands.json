@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/PSn00bSDK/projects/MyFate/build",
+  "command": "C:\\PSn00bSDK\\bin\\mipsel-none-elf-g++.exe -DPSN00BSDK=1 -IC:/PSn00bSDK/lib/libpsn00b/cmake/../../../include/libpsn00b -g -g -Wa,--strip-local-absolute -ffreestanding -fno-builtin -nostdlib -fdata-sections -ffunction-sections -fsigned-char -fno-strict-overflow -fdiagnostics-color=always -msoft-float -march=r3000 -mtune=r3000 -mabi=32 -mno-mt -mno-llsc -fno-exceptions -fno-rtti -fno-unwind-tables -fno-threadsafe-statics -fno-use-cxa-atexit -Og -mdivide-breaks -G8 -fno-pic -mno-abicalls -mgpopt -mno-extern-sdata -o CMakeFiles\\hellocpp.dir\\cd.cpp.obj -c C:\\PSn00bSDK\\projects\\MyFate\\cd.cpp",
+  "file": "C:\\PSn00bSDK\\projects\\MyFate\\cd.cpp",
+  "output": "CMakeFiles\\hellocpp.dir\\cd.cpp.obj"
+},
+{
+  "directory": "C:/PSn00bSDK/projects/MyFate/build",
+  "command": "C:\\PSn00bSDK\\bin\\mipsel-none-elf-g++.exe -DPSN00BSDK=1 -IC:/PSn00bSDK/lib/libpsn00b/cmake/../../../include/libpsn00b -g -g -Wa,--strip-local-absolute -ffreestanding -fno-builtin -nostdlib -fdata-sections -ffunction-sections -fsigned-char -fno-strict-overflow -fdiagnostics-color=always -msoft-float -march=r3000 -mtune=r3000 -mabi=32 -mno-mt -mno-llsc -fno-exceptions -fno-rtti -fno-unwind-tables -fno-threadsafe-statics -fno-use-cxa-atexit -Og -mdivide-breaks -G8 -fno-pic -mno-abicalls -mgpopt -mno-extern-sdata -o CMakeFiles\\hellocpp.dir\\data.cpp.obj -c C:\\PSn00bSDK\\projects\\MyFate\\data.cpp",
+  "file": "C:\\PSn00bSDK\\projects\\MyFate\\data.cpp",
+  "output": "CMakeFiles\\hellocpp.dir\\data.cpp.obj"
+},
+{
+  "directory": "C:/PSn00bSDK/projects/MyFate/build",
+  "command": "C:\\PSn00bSDK\\bin\\mipsel-none-elf-g++.exe -DPSN00BSDK=1 -IC:/PSn00bSDK/lib/libpsn00b/cmake/../../../include/libpsn00b -g -g -Wa,--strip-local-absolute -ffreestanding -fno-builtin -nostdlib -fdata-sections -ffunction-sections -fsigned-char -fno-strict-overflow -fdiagnostics-color=always -msoft-float -march=r3000 -mtune=r3000 -mabi=32 -mno-mt -mno-llsc -fno-exceptions -fno-rtti -fno-unwind-tables -fno-threadsafe-statics -fno-use-cxa-atexit -Og -mdivide-breaks -G8 -fno-pic -mno-abicalls -mgpopt -mno-extern-sdata -o CMakeFiles\\hellocpp.dir\\main.cpp.obj -c C:\\PSn00bSDK\\projects\\MyFate\\main.cpp",
+  "file": "C:\\PSn00bSDK\\projects\\MyFate\\main.cpp",
+  "output": "CMakeFiles\\hellocpp.dir\\main.cpp.obj"
+},
+{
+  "directory": "C:/PSn00bSDK/projects/MyFate/build",
+  "command": "C:\\PSn00bSDK\\bin\\mipsel-none-elf-g++.exe -DPSN00BSDK=1 -IC:/PSn00bSDK/lib/libpsn00b/cmake/../../../include/libpsn00b -g -g -Wa,--strip-local-absolute -ffreestanding -fno-builtin -nostdlib -fdata-sections -ffunction-sections -fsigned-char -fno-strict-overflow -fdiagnostics-color=always -msoft-float -march=r3000 -mtune=r3000 -mabi=32 -mno-mt -mno-llsc -fno-exceptions -fno-rtti -fno-unwind-tables -fno-threadsafe-statics -fno-use-cxa-atexit -Og -mdivide-breaks -G8 -fno-pic -mno-abicalls -mgpopt -mno-extern-sdata -o CMakeFiles\\hellocpp.dir\\render.cpp.obj -c C:\\PSn00bSDK\\projects\\MyFate\\render.cpp",
+  "file": "C:\\PSn00bSDK\\projects\\MyFate\\render.cpp",
+  "output": "CMakeFiles\\hellocpp.dir\\render.cpp.obj"
+}
+]
