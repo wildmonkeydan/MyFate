@@ -27,6 +27,9 @@
 /* Main */
 
 int main(int argc, const char **argv) {
+	int currentLevel = 0;
+	int levelChangeTimer = -1;
+
 	// Initialize the GPU and load the default font texture provided by
 	// PSn00bSDK at (960, 0) in VRAM.
 	ResetGraph(0);
@@ -61,7 +64,7 @@ int main(int argc, const char **argv) {
 	uint32_t* mainData = cdHandler.LoadFile("\\EXPORT.BIN;1");
 	Data gameData(mainData);
 
-	Ground test(gameData.GetLevel(0));
+	Ground test(gameData.GetLevel(currentLevel));
 
 	int x  = 0, y  = 0;
 	int dx = 1, dy = 1;
@@ -78,6 +81,26 @@ int main(int argc, const char **argv) {
 
 		cam.Update(pad, ctx);
 		test.Draw(ctx, screen_clip);
+
+		if (levelChangeTimer >= 0) {
+			levelChangeTimer++;
+
+			if (levelChangeTimer > 30) {
+				levelChangeTimer = -1;
+			}
+		}
+
+		if (pad.IsButtonDown(PAD_START) && currentLevel < 8 && levelChangeTimer == -1) {
+			currentLevel++;
+			test = Ground(gameData.GetLevel(currentLevel));
+			levelChangeTimer++;
+		}
+
+		if (pad.IsButtonDown(PAD_SELECT) && currentLevel > 0 && levelChangeTimer == -1) {
+			currentLevel--;
+			test = Ground(gameData.GetLevel(currentLevel));
+			levelChangeTimer++;
+		}
 
 		// Draw the square by allocating a TILE (i.e. untextured solid color
 		// rectangle) primitive at Z = 1.
