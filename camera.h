@@ -10,6 +10,7 @@ class Camera {
 public:
 	Camera(VECTOR pos, VECTOR rot);
 	void Update(Pad& pad, RenderContext& ctx);
+	MATRIX* GetMatrix();
 
 private:
 	VECTOR position;

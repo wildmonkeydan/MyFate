@@ -1,6 +1,7 @@
 #include "pad.h"
 
 #include <psxapi.h>
+#include <stdio.h>
 
 Pad::Pad() {
 	// Init BIOS pad driver and set pad buffers (buffers are updated
@@ -25,4 +26,37 @@ bool Pad::IsButtonDown(PadButton btn) {
 	}
 
 	return false;
+}
+
+DVECTOR Pad::GetStick(int stick) {
+	PADTYPE* pad;
+	pad = (PADTYPE*)&pad_buff[0][0];
+
+	DVECTOR out = { 0 };
+
+	if (pad->stat == 0) {
+		if (pad->type == PadTypeID::PAD_ID_ANALOG || pad->type == PadTypeID::PAD_ID_ANALOG_STICK) {
+			if (stick == LEFT_STICK) {
+				if ((pad->ls_x - 128) > 16 || (pad->ls_x - 128) < -16) {
+					out.vx = pad->ls_x - 128;
+				}
+
+				if ((pad->ls_y - 128) > 16 || (pad->ls_y - 128) < -16) {
+					out.vy = pad->ls_y - 128;
+				}
+			}
+			else {
+				if ((pad->rs_x - 128) > 16 || (pad->rs_x - 128) < -16) {
+					out.vx = pad->rs_x - 128;
+				}
+				if ((pad->rs_y - 128) > 16 || (pad->rs_y - 128) < -16) {
+					out.vy = pad->rs_y - 128;
+				}
+			}
+		}
+	}
+
+	printf("%d %d\n", out.vx, out.vy);
+
+	return out;
 }

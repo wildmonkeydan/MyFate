@@ -23,6 +23,7 @@
 #include "ground.h"
 #include "camera.h"
 #include "utils.h"
+#include "player.h"
 
 /* Main */
 
@@ -45,8 +46,8 @@ int main(int argc, const char **argv) {
 	VECTOR cam_pos, cam_rot;
 
 	// Camera default coordinates
-	setVector(&cam_pos, 0, ONE * -200, 0);
-	setVector(&cam_rot, 0, 0, 0);
+	setVector(&cam_pos, ONE * 3401, ONE * 1468, ONE * 9608);
+	setVector(&cam_rot, ONE * -6136, 0, 0);
 
 	Camera cam(cam_pos, cam_rot);
 
@@ -66,6 +67,8 @@ int main(int argc, const char **argv) {
 
 	Ground test(gameData.GetLevel(currentLevel));
 
+	Player player = Player();
+
 	int x  = 0, y  = 0;
 	int dx = 1, dy = 1;
 
@@ -79,8 +82,11 @@ int main(int argc, const char **argv) {
 		x += dx;
 		y += dy;
 
+		player.Update(pad);
+
 		cam.Update(pad, ctx);
 		test.Draw(ctx, screen_clip);
+		player.Draw(ctx, cam, screen_clip);
 
 		if (levelChangeTimer >= 0) {
 			levelChangeTimer++;

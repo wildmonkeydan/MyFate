@@ -33,7 +33,7 @@ bld/
 [Ll]og/
 [Ll]ogs/
 build/
-.sentry-native
+.sentry-native/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

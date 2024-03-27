@@ -20,7 +20,7 @@ void Ground::Draw(RenderContext& ctx, RECT& screen_clip) {
 
 	for (int y = 0; y < 8; y++) {
 		for (int x = 0; x < 10; x++) {
-			auto poly = ctx.new_primitive<POLY_FT4>();
+			auto poly = ctx.new_primitive<POLY_FT4>(1);
 
 			setPolyFT4(poly);
 			// Load first three vertices to GTE

@@ -9,6 +9,12 @@ Camera::Camera(VECTOR pos, VECTOR rot) {
 	position = pos;
 	rotation = rot;
 
+	//setVector(&position, 3401, 1468, 9608);
+	//setVector(&rotation, -6136, 0, 0);
+
+	
+	
+
 	// Initialize the GTE
 	InitGeom();
 
@@ -24,6 +30,8 @@ Camera::Camera(VECTOR pos, VECTOR rot) {
 }
 
 void Camera::Update(Pad& pad, RenderContext& ctx) {
+	
+
 	// Divide out fractions of camera rotation
 	trot.vx = rotation.vx >> 12;
 	trot.vy = rotation.vy >> 12;
@@ -139,4 +147,8 @@ void Camera::Update(Pad& pad, RenderContext& ctx) {
 	// Set rotation and translation matrix
 	gte_SetRotMatrix(&mtx);
 	gte_SetTransMatrix(&mtx);
+}
+
+MATRIX* Camera::GetMatrix() {
+	return &mtx;
 }
