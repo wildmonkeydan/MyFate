@@ -95,6 +95,7 @@ D:\Downloads\pcsx-redux-nightly-17936.20240219.9-x64\pcsx-redux.exe -iso "build/
     <ClCompile Include="data.cpp" />
     <ClCompile Include="ground.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="npc.cpp" />
     <ClCompile Include="pad.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="render.cpp" />

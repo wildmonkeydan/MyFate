@@ -38,34 +38,45 @@ int main(int argc, const char **argv) {
 
 	// Set up our rendering context.
 	RenderContext ctx;
-	ctx.setup(SCREEN_XRES, SCREEN_YRES, 0, 0, 0);
+	ctx.setup(SCREEN_XRES, SCREEN_YRES, 255, 0, 0);
 
+
+	// CD stuff
 	CD cdHandler;
 	cdHandler.Init();
 
-	VECTOR cam_pos, cam_rot;
 
+
+	// Camera stuff
+	VECTOR cam_pos, cam_rot;
 	// Camera default coordinates
 	setVector(&cam_pos, ONE * 3401, ONE * 1468, ONE * 9608);
 	setVector(&cam_rot, ONE * -6136, 0, 0);
-
 	Camera cam(cam_pos, cam_rot);
-
 	RECT	screen_clip;
 	// Set clip region
 	setRECT(&screen_clip, 0, 0, SCREEN_XRES, SCREEN_YRES);
+	scSetClipRect(screen_clip.x, screen_clip.y, screen_clip.w, screen_clip.h);
 
+	// PAD stuff
 	Pad pad = Pad();
 
 	FntOpen(0, 8, 320, 216, 0, 100);
 
+
+	// Loading files
 	TIM_IMAGE img;
 	LoadTexture((u_long*)cdHandler.LoadFile("\\TILES.TIM;1"), &img);
 
 	uint32_t* mainData = cdHandler.LoadFile("\\EXPORT.BIN;1");
 	Data gameData(mainData);
 
+	uint32_t* npcData = cdHandler.LoadFile("\\NPC.SMD;1");
+	SMD* npcModel = (SMD*)npcData;
+	smdInitData(npcModel);
+
 	Ground test(gameData.GetLevel(currentLevel));
+	NPC testNPC(gameData.GetNpc(0), npcModel);
 
 	Player player = Player();
 
@@ -85,8 +96,10 @@ int main(int argc, const char **argv) {
 		player.Update(pad);
 
 		cam.Update(pad, ctx);
+		testNPC.Draw(ctx, cam);
 		test.Draw(ctx, screen_clip);
 		player.Draw(ctx, cam, screen_clip);
+		
 
 		if (levelChangeTimer >= 0) {
 			levelChangeTimer++;

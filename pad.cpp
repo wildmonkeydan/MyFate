@@ -56,7 +56,5 @@ DVECTOR Pad::GetStick(int stick) {
 		}
 	}
 
-	printf("%d %d\n", out.vx, out.vy);
-
 	return out;
 }

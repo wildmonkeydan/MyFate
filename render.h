@@ -15,11 +15,13 @@ private:
 	DISPENV _disp_env;
 	DRAWENV _draw_env;
 
-	std::uint32_t* _ot;
+	
 	std::uint8_t* _buffer;
 	std::size_t   _ot_length, _buffer_length;
 
 public:
+	std::uint32_t* _ot;
+
 	RenderBuffer(std::size_t ot_length, std::size_t buffer_length);
 	~RenderBuffer(void);
 	void setup(int x, int y, int w, int h, int r, int g, int b);
@@ -48,9 +50,8 @@ public:
 
 class RenderContext {
 private:
-	RenderBuffer _buffers[2];
-	std::uint8_t* _next_packet;
-	int          _active_buffer;
+	
+	
 
 	// These functions are simply shorthands for _buffers[_active_buffer] and
 	// _buffers[_active_buffer ^ 1] respectively. They are only used internally.
@@ -62,6 +63,10 @@ private:
 	}
 
 public:
+	RenderBuffer _buffers[2];
+	int          _active_buffer;
+	std::uint8_t* _next_packet;
+
 	RenderContext(
 		std::size_t ot_length = DEFAULT_OT_LENGTH,
 		std::size_t buffer_length = DEFAULT_BUFFER_LENGTH
