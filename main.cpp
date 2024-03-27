@@ -20,11 +20,11 @@
 #include "render.h"
 #include "cd.h"
 #include "data.h"
+#include "ground.h"
+#include "camera.h"
+#include "utils.h"
 
 /* Main */
-
-static constexpr int SCREEN_XRES = 320;
-static constexpr int SCREEN_YRES = 240;
 
 int main(int argc, const char **argv) {
 	// Initialize the GPU and load the default font texture provided by
@@ -39,8 +39,29 @@ int main(int argc, const char **argv) {
 	CD cdHandler;
 	cdHandler.Init();
 
+	VECTOR cam_pos, cam_rot;
+
+	// Camera default coordinates
+	setVector(&cam_pos, 0, ONE * -200, 0);
+	setVector(&cam_rot, 0, 0, 0);
+
+	Camera cam(cam_pos, cam_rot);
+
+	RECT	screen_clip;
+	// Set clip region
+	setRECT(&screen_clip, 0, 0, SCREEN_XRES, SCREEN_YRES);
+
+	Pad pad = Pad();
+
+	FntOpen(0, 8, 320, 216, 0, 100);
+
+	TIM_IMAGE img;
+	LoadTexture((u_long*)cdHandler.LoadFile("\\TILES.TIM;1"), &img);
+
 	uint32_t* mainData = cdHandler.LoadFile("\\EXPORT.BIN;1");
 	Data gameData(mainData);
+
+	Ground test(gameData.GetLevel(0));
 
 	int x  = 0, y  = 0;
 	int dx = 1, dy = 1;
@@ -55,6 +76,9 @@ int main(int argc, const char **argv) {
 		x += dx;
 		y += dy;
 
+		cam.Update(pad, ctx);
+		test.Draw(ctx, screen_clip);
+
 		// Draw the square by allocating a TILE (i.e. untextured solid color
 		// rectangle) primitive at Z = 1.
 		auto tile = ctx.new_primitive<TILE>(1);
@@ -66,7 +90,7 @@ int main(int argc, const char **argv) {
 
 		// Draw some text in front of the square (Z = 0, primitives with higher
 		// Z indices are drawn first).
-		ctx.draw_text(8, 16, 0, "sfssdsfsggsiufsiuefiufigwiugfiusuguas");
+		//ctx.draw_text(8, 16, 0, "sfssdsfsggsiufsiuefiufigwiugfiusuguas\nusgfuiegfiugsfgsiegui");
 
 		ctx.flip();
 	}

@@ -90,21 +90,29 @@ D:\Downloads\pcsx-redux-nightly-17936.20240219.9-x64\pcsx-redux.exe -iso "build/
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="build\cmakefiles\3.26.4\compileridcxx\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="camera.cpp" />
     <ClCompile Include="cd.cpp" />
     <ClCompile Include="data.cpp" />
+    <ClCompile Include="ground.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pad.cpp" />
     <ClCompile Include="render.cpp" />
+    <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="build\cmakefiles\3.26.4\CMakeDetermineCompilerABI_CXX.bin" />
     <None Include="build\hellocpp.bin" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
     <ClInclude Include="cd.h" />
     <ClInclude Include="data.h" />
+    <ClInclude Include="ground.h" />
     <ClInclude Include="npc.h" />
     <ClInclude Include="object.h" />
+    <ClInclude Include="pad.h" />
     <ClInclude Include="render.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

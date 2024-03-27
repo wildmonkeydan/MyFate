@@ -62,6 +62,7 @@
 			<file name="SYSTEM.CNF"		type="data" source="C:/PSn00bSDK/projects/MyFate/system.cnf" />
 			<file name="TEMPLATE.EXE"	type="data" source="hellocpp.exe" />
 			<file name="EXPORT.BIN"		type="data" source="export.bin" />
+			<file name="TILES.TIM"		type="data" source="C:/PSn00bSDK/projects/MyFate/assets/MyFateTiles.tim" />
 			<!--
 				This file is only required if you are using dynamic linking
 				(see the system/dynlink example). It contains the executable's

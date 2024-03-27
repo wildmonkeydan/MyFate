@@ -4,8 +4,11 @@
 #include <cassert>
 #include <psxgpu.h>
 
-static constexpr size_t DEFAULT_OT_LENGTH = 15;
+static constexpr size_t DEFAULT_OT_LENGTH = 4094;
 static constexpr size_t DEFAULT_BUFFER_LENGTH = 8192;
+
+static constexpr int SCREEN_XRES = 320;
+static constexpr int SCREEN_YRES = 240;
 
 class RenderBuffer {
 private:
