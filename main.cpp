@@ -38,7 +38,8 @@ int main(int argc, const char **argv) {
 
 	// Set up our rendering context.
 	RenderContext ctx;
-	ctx.setup(SCREEN_XRES, SCREEN_YRES, 255, 0, 0);
+	ctx.setup(SCREEN_XRES, SCREEN_YRES, 0, 0, 0);
+
 
 
 	// CD stuff
@@ -80,20 +81,9 @@ int main(int argc, const char **argv) {
 
 	Player player = Player();
 
-	int x  = 0, y  = 0;
-	int dx = 1, dy = 1;
-
 	for (;;) {
-		// Update the position and velocity of the bouncing square.
-		if (x < 0 || x > (SCREEN_XRES - 64))
-			dx = -dx;
-		if (y < 0 || y > (SCREEN_YRES - 64))
-			dy = -dy;
 
-		x += dx;
-		y += dy;
-
-		player.Update(pad);
+		player.Update(pad, cam);
 
 		cam.Update(pad, ctx);
 		testNPC.Draw(ctx, cam);
@@ -120,15 +110,6 @@ int main(int argc, const char **argv) {
 			test = Ground(gameData.GetLevel(currentLevel));
 			levelChangeTimer++;
 		}
-
-		// Draw the square by allocating a TILE (i.e. untextured solid color
-		// rectangle) primitive at Z = 1.
-		auto tile = ctx.new_primitive<TILE>(1);
-
-		setTile(tile);
-		setXY0 (tile, x, y);
-		setWH  (tile, 64, 64);
-		setRGB0(tile, 255, 255, 0);
 
 		// Draw some text in front of the square (Z = 0, primitives with higher
 		// Z indices are drawn first).

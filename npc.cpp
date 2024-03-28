@@ -6,13 +6,15 @@ NPC::NPC(NPCData* datPtr, SMD* smd) {
 	data = datPtr;
 	model = smd;
 
-	setVector(&position, data->position.vx, data->position.vy, data->position.vz);
+	setVector(&position, data->position.vx, data->position.vy + 256, data->position.vz);
+	setVector(&rotation, -1024, 0, 0);
 
 	printf("NPC %d %d %d\n", data->position.vx, data->position.vy, data->position.vz);
+	printf("%d %d %d\n", rotation.vx, rotation.vy, rotation.vz);
 }
 
 void NPC::Draw(RenderContext& ctx, Camera& cam) {
-	/*// Object matrix for player
+	// Object matrix for player
 	MATRIX omtx;
 
 	// Set object rotation and position
@@ -29,15 +31,15 @@ void NPC::Draw(RenderContext& ctx, Camera& cam) {
 
 	// Set matrices
 	gte_SetRotMatrix(&omtx);
-	gte_SetTransMatrix(&omtx);*/
+	gte_SetTransMatrix(&omtx);
 
 	ot.ot = ctx._buffers[ctx._active_buffer]._ot;
 	ot.otlen = DEFAULT_OT_LENGTH;
-	ot.zdiv = 1;
+	ot.zdiv = 0;
 	ot.zoff = 0;
 
-	ctx._next_packet = smdSortModelFlat(ot.ot, ctx._next_packet, model);
+	ctx._next_packet = smdSortModel(&ot, ctx._next_packet, model);
 
 	// Restore matrix
-	//PopMatrix();
+	PopMatrix();
 }

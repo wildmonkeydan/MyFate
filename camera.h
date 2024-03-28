@@ -11,9 +11,10 @@ public:
 	Camera(VECTOR pos, VECTOR rot);
 	void Update(Pad& pad, RenderContext& ctx);
 	MATRIX* GetMatrix();
+	VECTOR position;
 
 private:
-	VECTOR position;
+	
 	VECTOR rotation;
 
 	VECTOR	tpos;			// Translation value for matrix calculations

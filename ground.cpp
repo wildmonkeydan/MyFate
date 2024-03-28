@@ -17,12 +17,13 @@ Ground::Ground(uint8_t* map) {
 
 void Ground::Draw(RenderContext& ctx, RECT& screen_clip) {
 	int p;
+	POLY_FT4* poly;
+
+	poly = (POLY_FT4*)ctx._next_packet;
 
 	for (int y = 0; y < 8; y++) {
 		for (int x = 0; x < 10; x++) {
-			auto poly = ctx.new_primitive<POLY_FT4>(1);
-
-			setPolyFT4(poly);
+			
 			// Load first three vertices to GTE
 			gte_ldv3(
 				&grid[y][x],
@@ -36,6 +37,9 @@ void Ground::Draw(RenderContext& ctx, RECT& screen_clip) {
 
 			if (((p >> 2) >= DEFAULT_OT_LENGTH) || ((p >> 2) <= 0))
 				continue;
+			
+
+			setPolyFT4(poly);
 
 			// Set the projected vertices to the primitive
 			gte_stsxy0(&poly->x0);
@@ -62,6 +66,11 @@ void Ground::Draw(RenderContext& ctx, RECT& screen_clip) {
 				mapPtr[(y * 10) + x].u + 63, mapPtr[(y * 10) + x].v,
 				mapPtr[(y * 10) + x].u, mapPtr[(y * 10) + x].v + 63,
 				mapPtr[(y * 10) + x].u + 63, mapPtr[(y * 10) + x].v + 63);
+
+			addPrim(ctx._buffers[ctx._active_buffer]._ot + p, poly);
+			poly++;
 		}
 	}
+
+	ctx._next_packet = (uint8_t*)poly;
 }
