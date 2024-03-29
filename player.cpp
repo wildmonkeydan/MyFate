@@ -4,7 +4,7 @@
 #include <inline_c.h>
 
 Player::Player() {
-	setVector(&position, 0, 128, 0);
+	setVector(&position, 4098, 128, 4098);
 	setVector(&rotation, 0, 0, 0);
 
 	setVector(&verts[0], 0, 512, 0);

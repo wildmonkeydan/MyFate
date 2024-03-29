@@ -9,8 +9,7 @@ NPC::NPC(NPCData* datPtr, SMD* smd) {
 	setVector(&position, data->position.vx, data->position.vy + 256, data->position.vz);
 	setVector(&rotation, -1024, 0, 0);
 
-	printf("NPC %d %d %d\n", data->position.vx, data->position.vy, data->position.vz);
-	printf("%d %d %d\n", rotation.vx, rotation.vy, rotation.vz);
+	printf("NPC %d \n", data->general);
 }
 
 void NPC::Draw(RenderContext& ctx, Camera& cam) {

@@ -48,6 +48,9 @@
     <ClCompile Include="npc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dialouge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="build\hellocpp.bin">
@@ -86,6 +89,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dialouge.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

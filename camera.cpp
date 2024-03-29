@@ -120,9 +120,9 @@ void Camera::Update(Pad& pad, RenderContext& ctx) {
 		position.vx >> 12,
 		position.vy >> 12,
 		position.vz >> 12);
-	FntPrint(-1, "RX=%d RY=%d\n",
+	/*FntPrint(-1, "RX=%d RY=%d\n",
 		rotation.vx >> 12,
-		rotation.vy >> 12);
+		rotation.vy >> 12);*/
 
 	// Flush text to drawing area
 	FntFlush(-1);

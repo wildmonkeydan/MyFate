@@ -1,307 +1,318 @@
 __text_start T ffffffff80010000 	C:/PSn00bSDK/projects/MyFate/camera.cpp:8
 _ZN6CameraC1E7_VECTORS0_ T ffffffff80010000 f0	C:/PSn00bSDK/projects/MyFate/camera.cpp:8
 _ZN6CameraC2E7_VECTORS0_ T ffffffff80010000 f0	C:/PSn00bSDK/projects/MyFate/camera.cpp:8
-_ZN6Camera6UpdateER3PadR13RenderContext T ffffffff800100f0 570	C:/PSn00bSDK/projects/MyFate/camera.cpp:32
-_ZN6Camera9GetMatrixEv T ffffffff80010660 c	C:/PSn00bSDK/projects/MyFate/camera.cpp:152
-_ZN2CD4InitEv T ffffffff8001066c 50	C:/PSn00bSDK/projects/MyFate/cd.cpp:5
-_ZN2CD8LoadFileEPKc T ffffffff800106bc 108	C:/PSn00bSDK/projects/MyFate/cd.cpp:17
-_ZN4DataC1EPm T ffffffff800107c4 118	C:/PSn00bSDK/projects/MyFate/data.cpp:6
-_ZN4DataC2EPm T ffffffff800107c4 118	C:/PSn00bSDK/projects/MyFate/data.cpp:6
-_ZN4Data8GetLevelEi T ffffffff800108dc 14	C:/PSn00bSDK/projects/MyFate/data.cpp:39
-_ZN4Data6GetNpcEi T ffffffff800108f0 1c	C:/PSn00bSDK/projects/MyFate/data.cpp:43
-_ZN6GroundC1ER4DataP3SMD T ffffffff8001090c 1dc	C:/PSn00bSDK/projects/MyFate/ground.cpp:7
-_ZN6GroundC2ER4DataP3SMD T ffffffff8001090c 1dc	C:/PSn00bSDK/projects/MyFate/ground.cpp:7
-_ZN6Ground4DrawER13RenderContextR5_RECTR6Camera T ffffffff80010ae8 3c8	C:/PSn00bSDK/projects/MyFate/ground.cpp:30
-_ZN6Ground11SwitchLevelER4DataP3SMDi T ffffffff80010eb0 17c	C:/PSn00bSDK/projects/MyFate/ground.cpp:95
-_ZN6Ground6UpdateER6PlayerP3SMDR4Data T ffffffff8001102c 1fc	C:/PSn00bSDK/projects/MyFate/ground.cpp:112
-main T ffffffff80011228 228	C:/PSn00bSDK/projects/MyFate/main.cpp:30
-_ZN3NPCC1EP7NPCDataP3SMD T ffffffff80011450 9c	C:/PSn00bSDK/projects/MyFate/npc.cpp:5
-_ZN3NPCC2EP7NPCDataP3SMD T ffffffff80011450 9c	C:/PSn00bSDK/projects/MyFate/npc.cpp:5
-_ZN3NPC4DrawER13RenderContextR6Camera T ffffffff800114ec 114	C:/PSn00bSDK/projects/MyFate/npc.cpp:16
-_ZN3PadC1Ev T ffffffff80011600 40	C:/PSn00bSDK/projects/MyFate/pad.cpp:6
-_ZN3PadC2Ev T ffffffff80011600 40	C:/PSn00bSDK/projects/MyFate/pad.cpp:6
-_ZN3Pad12IsButtonDownE9PadButton T ffffffff80011640 80	C:/PSn00bSDK/projects/MyFate/pad.cpp:18
-_ZN3Pad8GetStickEi T ffffffff800116c0 e4	C:/PSn00bSDK/projects/MyFate/pad.cpp:31
-_ZN6PlayerC1Ev T ffffffff800117a4 58	C:/PSn00bSDK/projects/MyFate/player.cpp:7
-_ZN6PlayerC2Ev T ffffffff800117a4 58	C:/PSn00bSDK/projects/MyFate/player.cpp:6
-_ZN6Player6UpdateER3PadR6Camera T ffffffff800117fc e0	C:/PSn00bSDK/projects/MyFate/player.cpp:16
-_ZN6Player4DrawER13RenderContextR6CameraR5_RECT T ffffffff800118dc 27c	C:/PSn00bSDK/projects/MyFate/player.cpp:39
-_ZN12RenderBuffer4drawEv W ffffffff80011b58 40	C:/PSn00bSDK/projects/MyFate/render.h:43
-_ZN12RenderBufferC1Ejj T ffffffff80011b98 b0	C:/PSn00bSDK/projects/MyFate/render.cpp:5
-_ZN12RenderBufferC2Ejj T ffffffff80011b98 b0	C:/PSn00bSDK/projects/MyFate/render.cpp:5
-_ZN12RenderBuffer5setupEiiiiiii T ffffffff80011c48 b0	C:/PSn00bSDK/projects/MyFate/render.cpp:27
-_ZN13RenderContextC1Ejj T ffffffff80011cf8 58	C:/PSn00bSDK/projects/MyFate/render.cpp:39
-_ZN13RenderContextC2Ejj T ffffffff80011cf8 58	C:/PSn00bSDK/projects/MyFate/render.cpp:39
-_ZN13RenderContext5setupEiiiii T ffffffff80011d50 dc	C:/PSn00bSDK/projects/MyFate/render.cpp:45
-_ZN13RenderContext4flipEv T ffffffff80011e2c d4	C:/PSn00bSDK/projects/MyFate/render.cpp:60
-_Z9test_clipP5_RECTss T ffffffff80011f00 84	C:/PSn00bSDK/projects/MyFate/utils.cpp:8
-_Z9quad_clipP5_RECTP8_DVECTORS2_S2_S2_ T ffffffff80011f84 160	C:/PSn00bSDK/projects/MyFate/utils.cpp:54
-_Z11LoadTexturePmP10_TIM_IMAGE T ffffffff800120e4 80	C:/PSn00bSDK/projects/MyFate/utils.cpp:81
-_vblank_handler t ffffffff80012164 40	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:40
-_process_drawop t ffffffff800121a4 bc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:47
-_gpu_irq_handler t ffffffff80012260 4c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:68
-_gpu_dma_handler t ffffffff800122ac 40	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:75
-_default_vsync_halt t ffffffff800122ec 70	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:131
-ResetGraph T ffffffff8001235c 190	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:82
-VSync T ffffffff800124ec 124	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:143
-SetDrawOpType T ffffffff80012610 10	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:195
-EnqueueDrawOp T ffffffff80012620 134	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:199
-DrawSync T ffffffff80012754 fc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:239
-_send_linked_list T ffffffff80012850 64	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/drawing.c:15
-DrawOTag T ffffffff800128b4 68	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/drawing.c:43
-ClearOTagR T ffffffff8001291c 98	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/drawing.c:120
-_build_drawenv_ot t ffffffff800129b4 228	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:37
-SetDefDrawEnv T ffffffff80012bdc b8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:81
-DrawOTagEnv T ffffffff80012c94 78	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:107
-SetDefDispEnv T ffffffff80012d0c 90	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:149
-PutDispEnv T ffffffff80012d9c 218	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:169
-SetDispMask T ffffffff80012fb4 2c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:276
-FntLoad T ffffffff80012fe0 20c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/font.c:27
-FntOpen T ffffffff800131ec 144	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/font.c:71
-FntPrint T ffffffff80013330 140	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/font.c:104
-FntFlush T ffffffff80013470 3d0	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/font.c:131
-_dma_transfer t ffffffff80013840 1bc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/image.c:30
-LoadImage T ffffffff800139fc e8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/image.c:72
-GetTimInfo T ffffffff80013ae4 cc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/image.c:186
-InitGeom T ffffffff80013bb0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/initgeom.s:11
-_isin t ffffffff80013c14 94	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/isin.c:15
-isin T ffffffff80013ca8 28	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/isin.c:32
-icos T ffffffff80013cd0 28	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/isin.c:36
-RotMatrix T ffffffff80013cf8 1cc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.c:3
-TransMatrix T ffffffff80013ec4 30	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.c:63
-ApplyMatrixLV T ffffffff80013ef4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.s:20
-CompMatrixLV T ffffffff80013f54 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.s:52
-MulMatrix0 T ffffffff80014074 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.s:205
-PushMatrix T ffffffff8001414c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.s:393
-PopMatrix T ffffffff80014198 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.s:416
-_wait_status t ffffffff800141e8 70	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxspu/common.c:29
-_manual_write t ffffffff80014258 128	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxspu/common.c:74
-SpuInit T ffffffff80014380 170	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxspu/common.c:111
-SpuSetTransferMode T ffffffff800144f0 10	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxspu/common.c:196
-_sector_callback t ffffffff80014500 10c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/cdread.c:35
-_poll_retry t ffffffff8001460c 12c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/cdread.c:56
-CdReadSync T ffffffff80014738 15c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/cdread.c:128
-CdReadRetry T ffffffff80014894 17c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/cdread.c:91
-CdRead T ffffffff80014a10 24	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/cdread.c:119
-_update_status t ffffffff80014a34 b8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:88
-_cd_irq_handler t ffffffff80014aec 2a8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:101
-CdCommandF T ffffffff80014d94 180	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:249
-CdCommand T ffffffff80014f14 c8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:298
-CdControlF T ffffffff80014fdc 104	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:321
-CdControl T ffffffff800150e0 88	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:347
-CdSync T ffffffff80015168 e0	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:377
-CdInit T ffffffff80015248 15c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:205
-CdLastPos T ffffffff800153a4 c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:403
-CdStatus T ffffffff800153b0 14	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:411
-_CdReadIsoDescriptor t ffffffff800153c4 30c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:35
-get_pathname t ffffffff800156d0 c0	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:423
-get_pathtable_entry t ffffffff80015790 118	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:298
-resolve_pathtable_path t ffffffff800158a8 94	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:350
-find_dir_entry t ffffffff8001593c 188	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:377
-_CdReadIsoDirectory t ffffffff80015ac4 280	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:136
-get_filename t ffffffff80015d44 c0	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:443
-CdSearchFile T ffffffff80015e04 304	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:465
-CdGetSector T ffffffff80016108 88	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/misc.c:35
-CdIntToPos T ffffffff80016190 f8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/misc.c:79
-CdPosToInt T ffffffff80016288 a0	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/misc.c:88
-CdMix T ffffffff80016328 98	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/misc.c:207
-_global_dma_handler t ffffffff800163c0 e8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:79
-_global_isr t ffffffff800164a8 ec	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:57
-InterruptCallback T ffffffff80016594 c8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:103
-DMACallback T ffffffff8001665c 13c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:125
-SetDMAPriority T ffffffff80016798 ac	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:160
-RestartCallback T ffffffff80016844 c8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:203
-ResetCallback T ffffffff8001690c d8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:183
-EnterCriticalSection T ffffffff800169e4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/_syscalls.s:13
-ExitCriticalSection T ffffffff800169f4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/_syscalls.s:24
-_96_remove T ffffffff80016a04 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/drivers.s:31
-printf T ffffffff80016a10 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/stdio.s:119
-InitPAD T ffffffff80016a1c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:241
-StartPAD T ffffffff80016a28 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:249
-ReturnFromException T ffffffff80016a34 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:265
-HookEntryInt T ffffffff80016a40 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:281
-ChangeClearPAD T ffffffff80016a4c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:313
-ChangeClearRCnt T ffffffff80016a58 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:355
-smdInitData T ffffffff80016a64 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:16
-scSetClipRect T ffffffff80016a90 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:36
-smdSortModel T ffffffff80016ab0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:64
-.sort_loop t ffffffff80016ae4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:82
-.no_culling t ffffffff80016b74 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:131
-.prim_tri t ffffffff80016b94 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:143
-.no_clip_l_x0 t ffffffff80016bf0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
-.no_clip_r_x0 t ffffffff80016c08 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
-.no_clip_t_y0 t ffffffff80016c20 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
-.no_clip_b_y0 t ffffffff80016c34 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
-.no_clip_l_x1 t ffffffff80016c58 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
-.no_clip_r_x1 t ffffffff80016c70 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
-.no_clip_t_y1 t ffffffff80016c88 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
-.no_clip_b_y1 t ffffffff80016c9c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
-.no_clip_l_x2 t ffffffff80016cc0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
-.no_clip_r_x2 t ffffffff80016cd8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
-.no_clip_t_y2 t ffffffff80016cf0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
-.no_clip_b_y2 t ffffffff80016d04 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:165
-.do_draw t ffffffff80016d28 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:178
-.F3_gouraud t ffffffff80016d64 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:200
-.F3_textured t ffffffff80016d88 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:214
-.F3_light t ffffffff80016dd0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:238
-.F3_light_tex t ffffffff80016e2c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:272
-.F3_light_smt t ffffffff80016e70 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:295
-.F3_light_tex_smt t ffffffff80016ed4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:328
-.sort_F3_pri t ffffffff80016f20 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:354
-.sort_FT3_pri t ffffffff80016f9c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:396
-.sort_G3_pri t ffffffff80016ff4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:428
-.sort_GT3_pri t ffffffff80017070 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:470
-.prim_quad t ffffffff800170c8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:504
-.no_clip_l_x0_q t ffffffff80017150 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_r_x0_q t ffffffff80017168 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_t_y0_q t ffffffff80017180 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_b_y0_q t ffffffff80017194 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_l_x1_q t ffffffff800171b8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_r_x1_q t ffffffff800171d0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_t_y1_q t ffffffff800171e8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_b_y1_q t ffffffff800171fc 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_l_x2_q t ffffffff80017220 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_r_x2_q t ffffffff80017238 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_t_y2_q t ffffffff80017250 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_b_y2_q t ffffffff80017264 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_l_x3_q t ffffffff80017288 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_r_x3_q t ffffffff800172a0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_t_y3_q t ffffffff800172b8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
-.no_clip_b_y3_q t ffffffff800172cc 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:544
-.do_draw_q t ffffffff80017308 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:562
-.F4_gouraud t ffffffff80017344 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:584
-.F4_textured t ffffffff80017370 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:600
-.F4_light t ffffffff800173c0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:626
-.F4_light_tex t ffffffff8001741c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:660
-.F4_light_smt t ffffffff80017468 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:685
-.F4_light_tex_smt t ffffffff800174f4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:729
-.sort_F4_pri t ffffffff8001754c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:759
-.sort_FT4_pri t ffffffff800175cc 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:802
-.sort_G4_pri t ffffffff80017628 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:835
-.sort_GT4_pri t ffffffff800176a8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:878
-.skip_prim t ffffffff80017704 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:911
-.exit t ffffffff8001770c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:916
-_start W ffffffff80017728 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/_start.s:16
-_Znaj T ffffffff80017738 20	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/cpp_support.cpp:26
-_find_fit t ffffffff80017758 5c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:82
-InitHeap W ffffffff800177b4 2c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:40
-sbrk W ffffffff800177e0 44	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:53
-TrackHeapUsage W ffffffff80017824 30	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:64
-malloc W ffffffff80017854 1bc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:98
-free W ffffffff80017a10 150	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:236
-_assert_abort T ffffffff80017b60 28	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/misc.c:13
-_start_inner T ffffffff80017b88 128	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/start.c:73
-toupper T ffffffff80017cb0 20	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:48
-memcpy T ffffffff80017cd0 38	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:68
-memcmp T ffffffff80017d08 50	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:116
-strcpy T ffffffff80017d58 38	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:143
-strcmp T ffffffff80017d90 3c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:164
-strchr T ffffffff80017dcc 38	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:186
-strlen T ffffffff80017e04 2c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:234
-strcat T ffffffff80017e30 68	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:253
-get_arg_in_size T ffffffff80017e98 128	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:102
-put_in_string T ffffffff80017fc0 2c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:167
-vsnprintf T ffffffff80017fec fec	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:376
-__func__.0 r ffffffff80019190 e
-__func__.2 r ffffffff800191d8 b
-__func__.11 r ffffffff800191e4 9
-__func__.1 r ffffffff8001921c b
-__func__.2 r ffffffff80019228 e
-__func__.6 r ffffffff80019238 c
-__func__.7 r ffffffff80019244 e
-__func__.1 r ffffffff800192d0 9
-__func__.2 r ffffffff800192dc 9
-__func__.0 r ffffffff80019384 b
-__func__.7 r ffffffff80019390 a
-_dummy_block r ffffffff80019400 10
-__func__.0 r ffffffff80019508 c
-__func__.0 r ffffffff800196b4 a
-__func__.1 r ffffffff800196c0 b
-_command_flags r ffffffff800196cc 1f
-__func__.4 r ffffffff80019bb4 d
-__func__.3 r ffffffff80019bdc c
-__func__.1 r ffffffff80019c5c f
-__func__.3 r ffffffff80019c6c c
-__func__.5 r ffffffff80019c78 12
-_isr_jmp_buf r ffffffff80019c8c 30
-__CTOR_LIST__ D ffffffff80019e50 
-__CTOR_END__ D ffffffff80019e58 
-__DTOR_LIST__ D ffffffff80019e60 
-__DTOR_END__ D ffffffff80019e68 
-_gpu_debug_font D ffffffff80019e68 840
-_gpu_debug_font_end d ffffffff8001a6a8 
-_matrix_stack d ffffffff8001a6a8 
-_vsync_halt_func d ffffffff8001a6c8 4
-__func__.3 d ffffffff8001a6cc 8
-__func__.4 d ffffffff8001a6d4 8
-_transfer_addr d ffffffff8001a6dc 2
-__func__.0 d ffffffff8001a6e4 6
-__bss_start B ffffffff8001a6ec 
-_last_hblank b ffffffff8001a6ec 2
-_last_vblank b ffffffff8001a6f0 4
-_vblank_counter b ffffffff8001a6f4 4
-_drawop_type b ffffffff8001a6f8 1
-_queue_length b ffffffff8001a6f9 1
-_queue_tail b ffffffff8001a6fa 1
-_queue_head b ffffffff8001a6fb 1
-_drawsync_callback b ffffffff8001a6fc 4
-_vsync_callback b ffffffff8001a700 4
-_gpu_video_mode B ffffffff8001a704 4
-_font_clut B ffffffff8001a708 2
-_font_tpage B ffffffff8001a70a 2
-_nstreams b ffffffff8001a70c 4
-_next_saved_rect b ffffffff8001a710 4
-_transfer_mode b ffffffff8001a714 4
-_pending_sectors b ffffffff8001a718 4
-_pending_attempts b ffffffff8001a71c 4
-_read_timeout b ffffffff8001a720 4
-_read_addr b ffffffff8001a724 4
-_read_result b ffffffff8001a728 4
-_sector_size b ffffffff8001a72c 4
-_total_sectors b ffffffff8001a730 4
-_read_callback b ffffffff8001a734 4
-_cd_media_changed B ffffffff8001a738 4
-_cd_override_callback B ffffffff8001a73c 4
-_sync_pending b ffffffff8001a740 1
-_ack_pending b ffffffff8001a741 1
-_last_error b ffffffff8001a742 1
-_last_irq b ffffffff8001a743 1
-_last_status b ffffffff8001a744 1
-_last_pos b ffffffff8001a748 4
-_last_mode b ffffffff8001a74c 1
-_last_command b ffffffff8001a74d 1
-_result_ptr b ffffffff8001a750 4
-_pause_callback b ffffffff8001a754 4
-_sync_callback b ffffffff8001a758 4
-_ready_callback b ffffffff8001a75c 4
-_cd_iso_error b ffffffff8001a760 4
-_cd_iso_directory_len b ffffffff8001a764 4
-_cd_iso_directory_buff b ffffffff8001a768 4
-_cd_iso_pathtable_buff b ffffffff8001a76c 4
-_cd_iso_last_dir_lba b ffffffff8001a770 4
-_isr_installed b ffffffff8001a774 4
-_saved_dma_dicr b ffffffff8001a778 4
-_saved_dma_dpcr b ffffffff8001a77c 4
-_saved_irq_mask b ffffffff8001a780 2
-_num_dma_handlers b ffffffff8001a784 4
-_alloc_tail b ffffffff8001a788 4
-_alloc_head b ffffffff8001a78c 4
-_alloc_start b ffffffff8001a790 4
-_heap_alloc_max b ffffffff8001a794 4
-_heap_alloc b ffffffff8001a798 4
-_heap_limit b ffffffff8001a79c 4
-_heap_end b ffffffff8001a7a0 4
-_heap_start b ffffffff8001a7a4 4
-__argv B ffffffff8001a7a8 4
-__argc B ffffffff8001a7ac 4
-_smd_tpage_base B ffffffff8001a7b0 4
-_sc_clip B ffffffff8001a7b4 8
-_draw_queue b ffffffff8001a7bc 100
-_stream b ffffffff8001a8bc e0
-_saved_rects b ffffffff8001a99c 80
-_cd_iso_descriptor_buff b ffffffff8001aa1c 800
-_isr_stack b ffffffff8001b21c 1000
-_dma_handlers b ffffffff8001c21c 1c
-_irq_handlers b ffffffff8001c238 2c
-_end B ffffffff8001c264 
-_gp d ffffffff800226c0 
+_ZN6Camera6UpdateER3PadR13RenderContext T ffffffff800100f0 54c	C:/PSn00bSDK/projects/MyFate/camera.cpp:32
+_ZN6Camera9GetMatrixEv T ffffffff8001063c c	C:/PSn00bSDK/projects/MyFate/camera.cpp:152
+_ZN2CD4InitEv T ffffffff80010648 50	C:/PSn00bSDK/projects/MyFate/cd.cpp:5
+_ZN2CD8LoadFileEPKc T ffffffff80010698 108	C:/PSn00bSDK/projects/MyFate/cd.cpp:17
+_ZN4DataC1EPm T ffffffff800107a0 118	C:/PSn00bSDK/projects/MyFate/data.cpp:6
+_ZN4DataC2EPm T ffffffff800107a0 118	C:/PSn00bSDK/projects/MyFate/data.cpp:6
+_ZN4Data8GetLevelEi T ffffffff800108b8 14	C:/PSn00bSDK/projects/MyFate/data.cpp:39
+_ZN4Data6GetNpcEi T ffffffff800108cc 1c	C:/PSn00bSDK/projects/MyFate/data.cpp:43
+_ZN4Data9GetStringEi T ffffffff800108e8 14	C:/PSn00bSDK/projects/MyFate/data.cpp:51
+_ZN13RenderContext9draw_textEiiiPKc W ffffffff800108fc e8	C:/PSn00bSDK/projects/MyFate/render.h:98
+_ZN8DialougeC1EPc T ffffffff800109e4 20	C:/PSn00bSDK/projects/MyFate/dialouge.cpp:5
+_ZN8DialougeC2EPc T ffffffff800109e4 20	C:/PSn00bSDK/projects/MyFate/dialouge.cpp:5
+_ZN8Dialouge4TalkEt T ffffffff80010a04 c0	C:/PSn00bSDK/projects/MyFate/dialouge.cpp:41
+_ZN8Dialouge6UpdateER3Pad T ffffffff80010ac4 b0	C:/PSn00bSDK/projects/MyFate/dialouge.cpp:9
+_ZN13RenderContext13new_primitiveI5_TILEEEPT_i W ffffffff80010b74 140	C:/PSn00bSDK/projects/MyFate/render.h:81
+_ZN8Dialouge4DrawER13RenderContext T ffffffff80010cb4 b4	C:/PSn00bSDK/projects/MyFate/dialouge.cpp:28
+_ZN6GroundC1ER4DataP3SMD T ffffffff80010d68 1dc	C:/PSn00bSDK/projects/MyFate/ground.cpp:7
+_ZN6GroundC2ER4DataP3SMD T ffffffff80010d68 1dc	C:/PSn00bSDK/projects/MyFate/ground.cpp:7
+_ZN6Ground4DrawER13RenderContextR5_RECTR6Camera T ffffffff80010f44 3c8	C:/PSn00bSDK/projects/MyFate/ground.cpp:30
+_ZN6Ground11SwitchLevelER4DataP3SMDi T ffffffff8001130c 17c	C:/PSn00bSDK/projects/MyFate/ground.cpp:95
+_ZN6Ground6UpdateER6PlayerP3SMDR4Data T ffffffff80011488 1fc	C:/PSn00bSDK/projects/MyFate/ground.cpp:112
+main T ffffffff80011684 278	C:/PSn00bSDK/projects/MyFate/main.cpp:31
+_ZN3NPCC1EP7NPCDataP3SMD T ffffffff800118fc 6c	C:/PSn00bSDK/projects/MyFate/npc.cpp:5
+_ZN3NPCC2EP7NPCDataP3SMD T ffffffff800118fc 6c	C:/PSn00bSDK/projects/MyFate/npc.cpp:5
+_ZN3NPC4DrawER13RenderContextR6Camera T ffffffff80011968 114	C:/PSn00bSDK/projects/MyFate/npc.cpp:15
+_ZN3PadC1Ev T ffffffff80011a7c 40	C:/PSn00bSDK/projects/MyFate/pad.cpp:6
+_ZN3PadC2Ev T ffffffff80011a7c 40	C:/PSn00bSDK/projects/MyFate/pad.cpp:6
+_ZN3Pad12IsButtonDownE9PadButton T ffffffff80011abc 80	C:/PSn00bSDK/projects/MyFate/pad.cpp:18
+_ZN3Pad8GetStickEi T ffffffff80011b3c e4	C:/PSn00bSDK/projects/MyFate/pad.cpp:31
+_ZN6PlayerC1Ev T ffffffff80011c20 5c	C:/PSn00bSDK/projects/MyFate/player.cpp:7
+_ZN6PlayerC2Ev T ffffffff80011c20 5c	C:/PSn00bSDK/projects/MyFate/player.cpp:6
+_ZN6Player6UpdateER3PadR6Camera T ffffffff80011c7c e0	C:/PSn00bSDK/projects/MyFate/player.cpp:16
+_ZN6Player4DrawER13RenderContextR6CameraR5_RECT T ffffffff80011d5c 27c	C:/PSn00bSDK/projects/MyFate/player.cpp:39
+_ZN12RenderBuffer4drawEv W ffffffff80011fd8 40	C:/PSn00bSDK/projects/MyFate/render.h:43
+_ZN12RenderBufferC1Ejj T ffffffff80012018 b0	C:/PSn00bSDK/projects/MyFate/render.cpp:5
+_ZN12RenderBufferC2Ejj T ffffffff80012018 b0	C:/PSn00bSDK/projects/MyFate/render.cpp:5
+_ZN12RenderBuffer5setupEiiiiiii T ffffffff800120c8 b0	C:/PSn00bSDK/projects/MyFate/render.cpp:27
+_ZN13RenderContextC1Ejj T ffffffff80012178 58	C:/PSn00bSDK/projects/MyFate/render.cpp:39
+_ZN13RenderContextC2Ejj T ffffffff80012178 58	C:/PSn00bSDK/projects/MyFate/render.cpp:39
+_ZN13RenderContext5setupEiiiii T ffffffff800121d0 dc	C:/PSn00bSDK/projects/MyFate/render.cpp:45
+_ZN13RenderContext4flipEv T ffffffff800122ac d4	C:/PSn00bSDK/projects/MyFate/render.cpp:60
+_Z9test_clipP5_RECTss T ffffffff80012380 84	C:/PSn00bSDK/projects/MyFate/utils.cpp:8
+_Z9quad_clipP5_RECTP8_DVECTORS2_S2_S2_ T ffffffff80012404 160	C:/PSn00bSDK/projects/MyFate/utils.cpp:54
+_Z11LoadTexturePmP10_TIM_IMAGE T ffffffff80012564 80	C:/PSn00bSDK/projects/MyFate/utils.cpp:81
+_vblank_handler t ffffffff800125e4 40	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:40
+_process_drawop t ffffffff80012624 bc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:47
+_gpu_irq_handler t ffffffff800126e0 4c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:68
+_gpu_dma_handler t ffffffff8001272c 40	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:75
+_default_vsync_halt t ffffffff8001276c 70	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:131
+ResetGraph T ffffffff800127dc 190	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:82
+VSync T ffffffff8001296c 124	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:143
+SetDrawOpType T ffffffff80012a90 10	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:195
+EnqueueDrawOp T ffffffff80012aa0 134	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:199
+DrawSync T ffffffff80012bd4 fc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/common.c:239
+_send_linked_list T ffffffff80012cd0 64	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/drawing.c:15
+DrawOTag T ffffffff80012d34 68	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/drawing.c:43
+ClearOTagR T ffffffff80012d9c 98	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/drawing.c:120
+_build_drawenv_ot t ffffffff80012e34 228	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:37
+SetDefDrawEnv T ffffffff8001305c b8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:81
+DrawOTagEnv T ffffffff80013114 78	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:107
+SetDefDispEnv T ffffffff8001318c 90	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:149
+PutDispEnv T ffffffff8001321c 218	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:169
+SetDispMask T ffffffff80013434 2c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/env.c:276
+FntLoad T ffffffff80013460 20c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/font.c:27
+FntOpen T ffffffff8001366c 144	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/font.c:71
+FntPrint T ffffffff800137b0 140	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/font.c:104
+FntFlush T ffffffff800138f0 3d0	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/font.c:131
+FntSort T ffffffff80013cc0 218	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/font.c:234
+_dma_transfer t ffffffff80013ed8 1bc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/image.c:30
+LoadImage T ffffffff80014094 e8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/image.c:72
+GetTimInfo T ffffffff8001417c cc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgpu/image.c:186
+InitGeom T ffffffff80014248 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/initgeom.s:11
+_isin t ffffffff800142ac 94	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/isin.c:15
+isin T ffffffff80014340 28	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/isin.c:32
+icos T ffffffff80014368 28	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/isin.c:36
+RotMatrix T ffffffff80014390 1cc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.c:3
+TransMatrix T ffffffff8001455c 30	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.c:63
+ApplyMatrixLV T ffffffff8001458c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.s:20
+CompMatrixLV T ffffffff800145ec 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.s:52
+MulMatrix0 T ffffffff8001470c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.s:205
+PushMatrix T ffffffff800147e4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.s:393
+PopMatrix T ffffffff80014830 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxgte/matrix.s:416
+_wait_status t ffffffff80014880 70	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxspu/common.c:29
+_manual_write t ffffffff800148f0 128	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxspu/common.c:74
+SpuInit T ffffffff80014a18 170	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxspu/common.c:111
+SpuSetTransferMode T ffffffff80014b88 10	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxspu/common.c:196
+_sector_callback t ffffffff80014b98 10c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/cdread.c:35
+_poll_retry t ffffffff80014ca4 12c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/cdread.c:56
+CdReadSync T ffffffff80014dd0 15c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/cdread.c:128
+CdReadRetry T ffffffff80014f2c 17c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/cdread.c:91
+CdRead T ffffffff800150a8 24	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/cdread.c:119
+_update_status t ffffffff800150cc b8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:88
+_cd_irq_handler t ffffffff80015184 2a8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:101
+CdCommandF T ffffffff8001542c 180	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:249
+CdCommand T ffffffff800155ac c8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:298
+CdControlF T ffffffff80015674 104	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:321
+CdControl T ffffffff80015778 88	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:347
+CdSync T ffffffff80015800 e0	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:377
+CdInit T ffffffff800158e0 15c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:205
+CdLastPos T ffffffff80015a3c c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:403
+CdStatus T ffffffff80015a48 14	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/common.c:411
+_CdReadIsoDescriptor t ffffffff80015a5c 30c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:35
+get_pathname t ffffffff80015d68 c0	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:423
+get_pathtable_entry t ffffffff80015e28 118	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:298
+resolve_pathtable_path t ffffffff80015f40 94	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:350
+find_dir_entry t ffffffff80015fd4 188	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:377
+_CdReadIsoDirectory t ffffffff8001615c 280	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:136
+get_filename t ffffffff800163dc c0	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:443
+CdSearchFile T ffffffff8001649c 304	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/isofs.c:465
+CdGetSector T ffffffff800167a0 88	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/misc.c:35
+CdIntToPos T ffffffff80016828 f8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/misc.c:79
+CdPosToInt T ffffffff80016920 a0	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/misc.c:88
+CdMix T ffffffff800169c0 98	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxcd/misc.c:207
+_global_dma_handler t ffffffff80016a58 e8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:79
+_global_isr t ffffffff80016b40 ec	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:57
+InterruptCallback T ffffffff80016c2c c8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:103
+DMACallback T ffffffff80016cf4 13c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:125
+SetDMAPriority T ffffffff80016e30 ac	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:160
+RestartCallback T ffffffff80016edc c8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:203
+ResetCallback T ffffffff80016fa4 d8	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxetc/interrupts.c:183
+EnterCriticalSection T ffffffff8001707c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/_syscalls.s:13
+ExitCriticalSection T ffffffff8001708c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/_syscalls.s:24
+_96_remove T ffffffff8001709c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/drivers.s:31
+printf T ffffffff800170a8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/stdio.s:119
+InitPAD T ffffffff800170b4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:241
+StartPAD T ffffffff800170c0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:249
+ReturnFromException T ffffffff800170cc 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:265
+HookEntryInt T ffffffff800170d8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:281
+ChangeClearPAD T ffffffff800170e4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:313
+ChangeClearRCnt T ffffffff800170f0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/psxapi/sys.s:355
+smdInitData T ffffffff800170fc 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:16
+scSetClipRect T ffffffff80017128 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:36
+smdSortModel T ffffffff80017148 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:64
+.sort_loop t ffffffff8001717c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:82
+.no_culling t ffffffff8001720c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:131
+.prim_tri t ffffffff8001722c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:143
+.no_clip_l_x0 t ffffffff80017288 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
+.no_clip_r_x0 t ffffffff800172a0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
+.no_clip_t_y0 t ffffffff800172b8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
+.no_clip_b_y0 t ffffffff800172cc 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
+.no_clip_l_x1 t ffffffff800172f0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
+.no_clip_r_x1 t ffffffff80017308 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
+.no_clip_t_y1 t ffffffff80017320 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
+.no_clip_b_y1 t ffffffff80017334 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
+.no_clip_l_x2 t ffffffff80017358 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
+.no_clip_r_x2 t ffffffff80017370 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
+.no_clip_t_y2 t ffffffff80017388 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:163
+.no_clip_b_y2 t ffffffff8001739c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:165
+.do_draw t ffffffff800173c0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:178
+.F3_gouraud t ffffffff800173fc 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:200
+.F3_textured t ffffffff80017420 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:214
+.F3_light t ffffffff80017468 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:238
+.F3_light_tex t ffffffff800174c4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:272
+.F3_light_smt t ffffffff80017508 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:295
+.F3_light_tex_smt t ffffffff8001756c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:328
+.sort_F3_pri t ffffffff800175b8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:354
+.sort_FT3_pri t ffffffff80017634 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:396
+.sort_G3_pri t ffffffff8001768c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:428
+.sort_GT3_pri t ffffffff80017708 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:470
+.prim_quad t ffffffff80017760 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:504
+.no_clip_l_x0_q t ffffffff800177e8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_r_x0_q t ffffffff80017800 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_t_y0_q t ffffffff80017818 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_b_y0_q t ffffffff8001782c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_l_x1_q t ffffffff80017850 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_r_x1_q t ffffffff80017868 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_t_y1_q t ffffffff80017880 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_b_y1_q t ffffffff80017894 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_l_x2_q t ffffffff800178b8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_r_x2_q t ffffffff800178d0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_t_y2_q t ffffffff800178e8 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_b_y2_q t ffffffff800178fc 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_l_x3_q t ffffffff80017920 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_r_x3_q t ffffffff80017938 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_t_y3_q t ffffffff80017950 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:542
+.no_clip_b_y3_q t ffffffff80017964 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:544
+.do_draw_q t ffffffff800179a0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:562
+.F4_gouraud t ffffffff800179dc 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:584
+.F4_textured t ffffffff80017a08 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:600
+.F4_light t ffffffff80017a58 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:626
+.F4_light_tex t ffffffff80017ab4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:660
+.F4_light_smt t ffffffff80017b00 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:685
+.F4_light_tex_smt t ffffffff80017b8c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:729
+.sort_F4_pri t ffffffff80017be4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:759
+.sort_FT4_pri t ffffffff80017c64 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:802
+.sort_G4_pri t ffffffff80017cc0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:835
+.sort_GT4_pri t ffffffff80017d40 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:878
+.skip_prim t ffffffff80017d9c 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:911
+.exit t ffffffff80017da4 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/smd/smd.s:916
+_start W ffffffff80017dc0 	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/_start.s:16
+_Znaj T ffffffff80017dd0 20	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/cpp_support.cpp:26
+_find_fit t ffffffff80017df0 5c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:82
+InitHeap W ffffffff80017e4c 2c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:40
+sbrk W ffffffff80017e78 44	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:53
+TrackHeapUsage W ffffffff80017ebc 30	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:64
+malloc W ffffffff80017eec 1bc	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:98
+free W ffffffff800180a8 150	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/malloc.c:236
+_assert_abort T ffffffff800181f8 28	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/misc.c:13
+_start_inner T ffffffff80018220 128	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/start.c:73
+toupper T ffffffff80018348 20	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:48
+memcpy T ffffffff80018368 38	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:68
+memcmp T ffffffff800183a0 50	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:116
+strcpy T ffffffff800183f0 38	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:143
+strncpy T ffffffff80018428 5c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:153
+strcmp T ffffffff80018484 3c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:164
+strchr T ffffffff800184c0 38	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:186
+strlen T ffffffff800184f8 2c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:234
+strcat T ffffffff80018524 68	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/string.c:253
+get_arg_in_size T ffffffff8001858c 128	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:102
+put_in_string T ffffffff800186b4 2c	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:167
+vsnprintf T ffffffff800186e0 fec	D:/a/PSn00bSDK/PSn00bSDK/sdk/libpsn00b/libc/vsprintf.c:376
+__func__.0 r ffffffff800198c4 e
+__func__.2 r ffffffff8001990c b
+__func__.11 r ffffffff80019918 9
+__func__.1 r ffffffff80019950 b
+__func__.2 r ffffffff8001995c e
+__func__.6 r ffffffff8001996c c
+__func__.7 r ffffffff80019978 e
+__func__.1 r ffffffff80019a10 9
+__func__.2 r ffffffff80019a1c 9
+__func__.0 r ffffffff80019ac4 b
+__func__.7 r ffffffff80019ad0 a
+_dummy_block r ffffffff80019b40 10
+__func__.0 r ffffffff80019c48 c
+__func__.0 r ffffffff80019df4 a
+__func__.1 r ffffffff80019e00 b
+_command_flags r ffffffff80019e0c 1f
+__func__.4 r ffffffff8001a2f4 d
+__func__.3 r ffffffff8001a31c c
+__func__.1 r ffffffff8001a39c f
+__func__.3 r ffffffff8001a3ac c
+__func__.5 r ffffffff8001a3b8 12
+_isr_jmp_buf r ffffffff8001a3cc 30
+__CTOR_LIST__ D ffffffff8001a590 
+__CTOR_END__ D ffffffff8001a598 
+__DTOR_LIST__ D ffffffff8001a5a0 
+__DTOR_END__ D ffffffff8001a5a8 
+_gpu_debug_font D ffffffff8001a5a8 840
+_gpu_debug_font_end d ffffffff8001ade8 
+_matrix_stack d ffffffff8001ade8 
+_vsync_halt_func d ffffffff8001ae08 4
+__func__.0 d ffffffff8001ae0c 8
+__func__.3 d ffffffff8001ae14 8
+__func__.4 d ffffffff8001ae1c 8
+_transfer_addr d ffffffff8001ae24 2
+__func__.0 d ffffffff8001ae2c 6
+__bss_start B ffffffff8001ae34 
+_last_hblank b ffffffff8001ae34 2
+_last_vblank b ffffffff8001ae38 4
+_vblank_counter b ffffffff8001ae3c 4
+_drawop_type b ffffffff8001ae40 1
+_queue_length b ffffffff8001ae41 1
+_queue_tail b ffffffff8001ae42 1
+_queue_head b ffffffff8001ae43 1
+_drawsync_callback b ffffffff8001ae44 4
+_vsync_callback b ffffffff8001ae48 4
+_gpu_video_mode B ffffffff8001ae4c 4
+_font_clut B ffffffff8001ae50 2
+_font_tpage B ffffffff8001ae52 2
+_nstreams b ffffffff8001ae54 4
+_next_saved_rect b ffffffff8001ae58 4
+_transfer_mode b ffffffff8001ae5c 4
+_pending_sectors b ffffffff8001ae60 4
+_pending_attempts b ffffffff8001ae64 4
+_read_timeout b ffffffff8001ae68 4
+_read_addr b ffffffff8001ae6c 4
+_read_result b ffffffff8001ae70 4
+_sector_size b ffffffff8001ae74 4
+_total_sectors b ffffffff8001ae78 4
+_read_callback b ffffffff8001ae7c 4
+_cd_media_changed B ffffffff8001ae80 4
+_cd_override_callback B ffffffff8001ae84 4
+_sync_pending b ffffffff8001ae88 1
+_ack_pending b ffffffff8001ae89 1
+_last_error b ffffffff8001ae8a 1
+_last_irq b ffffffff8001ae8b 1
+_last_status b ffffffff8001ae8c 1
+_last_pos b ffffffff8001ae90 4
+_last_mode b ffffffff8001ae94 1
+_last_command b ffffffff8001ae95 1
+_result_ptr b ffffffff8001ae98 4
+_pause_callback b ffffffff8001ae9c 4
+_sync_callback b ffffffff8001aea0 4
+_ready_callback b ffffffff8001aea4 4
+_cd_iso_error b ffffffff8001aea8 4
+_cd_iso_directory_len b ffffffff8001aeac 4
+_cd_iso_directory_buff b ffffffff8001aeb0 4
+_cd_iso_pathtable_buff b ffffffff8001aeb4 4
+_cd_iso_last_dir_lba b ffffffff8001aeb8 4
+_isr_installed b ffffffff8001aebc 4
+_saved_dma_dicr b ffffffff8001aec0 4
+_saved_dma_dpcr b ffffffff8001aec4 4
+_saved_irq_mask b ffffffff8001aec8 2
+_num_dma_handlers b ffffffff8001aecc 4
+_alloc_tail b ffffffff8001aed0 4
+_alloc_head b ffffffff8001aed4 4
+_alloc_start b ffffffff8001aed8 4
+_heap_alloc_max b ffffffff8001aedc 4
+_heap_alloc b ffffffff8001aee0 4
+_heap_limit b ffffffff8001aee4 4
+_heap_end b ffffffff8001aee8 4
+_heap_start b ffffffff8001aeec 4
+__argv B ffffffff8001aef0 4
+__argc B ffffffff8001aef4 4
+_smd_tpage_base B ffffffff8001aef8 4
+_sc_clip B ffffffff8001aefc 8
+_draw_queue b ffffffff8001af04 100
+_stream b ffffffff8001b004 e0
+_saved_rects b ffffffff8001b0e4 80
+_cd_iso_descriptor_buff b ffffffff8001b164 800
+_isr_stack b ffffffff8001b964 1000
+_dma_handlers b ffffffff8001c964 1c
+_irq_handlers b ffffffff8001c980 2c
+_end B ffffffff8001c9ac 
+_gp d ffffffff80022e00 

@@ -24,6 +24,7 @@
 #include "camera.h"
 #include "utils.h"
 #include "player.h"
+#include "dialouge.h"
 
 /* Main */
 
@@ -76,17 +77,21 @@ int main(int argc, const char **argv) {
 	smdInitData(npcModel);
 
 	Ground test(gameData, npcModel);
-
+	Dialouge dialouge(gameData.GetString(0));
 	Player player = Player();
+
+	dialouge.Talk(0);
 
 	for (;;) {
 
 		player.Update(pad, cam);
 		test.Update(player, npcModel, gameData);
+		dialouge.Update(pad);
 
 		cam.Update(pad, ctx);
 		test.Draw(ctx, screen_clip, cam);
 		player.Draw(ctx, cam, screen_clip);
+		dialouge.Draw(ctx);
 		
 
 		// Draw some text in front of the square (Z = 0, primitives with higher
