@@ -2,9 +2,10 @@
 #include "utils.h"
 
 #include <inline_c.h>
+#include <stdlib.h>
 
-Ground::Ground(uint8_t* map) {
-	mapPtr = (Tile*)map;
+Ground::Ground(Data& dat, SMD* npcModel) {
+	mapPtr = (Tile*)dat.GetLevel(0);
 
 	for (int y = 0; y < 9; y++) {
 		for (int x = 0; x < 11; x++) {
@@ -13,9 +14,20 @@ Ground::Ground(uint8_t* map) {
 			grid[y][x].vy = 0;
 		}
 	}
+
+	numNpcs = *(dat.GetLevel(0) + 320);
+	printf("%d", numNpcs);
+
+	if (numNpcs != 0) {
+		npcs = (NPC*)malloc(sizeof(NPC) * numNpcs);
+	}
+
+	for (int i = 0; i < numNpcs; i++) {
+		npcs[i] = NPC(dat.GetNpc(*(dat.GetLevel(0) + (321 + i))), npcModel);
+	}
 }
 
-void Ground::Draw(RenderContext& ctx, RECT& screen_clip) {
+void Ground::Draw(RenderContext& ctx, RECT& screen_clip, Camera& cam) {
 	int p;
 	POLY_FT4* poly;
 
@@ -73,4 +85,69 @@ void Ground::Draw(RenderContext& ctx, RECT& screen_clip) {
 	}
 
 	ctx._next_packet = (uint8_t*)poly;
+
+
+	for (int i = 0; i < numNpcs; i++) {
+		npcs[i].Draw(ctx, cam);
+	}
+}
+
+void Ground::SwitchLevel(Data& dat, SMD* npcModel, int level) {
+	mapPtr = (Tile*)dat.GetLevel(level);
+
+	free(npcs);
+
+	numNpcs = *(dat.GetLevel(level) + 320);
+	printf("%d", numNpcs);
+
+	if (numNpcs != 0) {
+		npcs = (NPC*)malloc(sizeof(NPC) * numNpcs);
+	}
+
+	for (int i = 0; i < numNpcs; i++) {
+		npcs[i] = NPC(dat.GetNpc(*(dat.GetLevel(0) + (321 + i))), npcModel);
+	}
+}
+
+void Ground::Update(Player& ply, SMD* npcModel, Data& dat) {
+	RECT collsions;
+
+	collsions.x = ply.position.vx >> 10;
+	collsions.y = ply.position.vz >> 10;
+	collsions.w = (ply.position.vx + 512) >> 10;
+	collsions.h = (ply.position.vz + 512) >> 10;
+
+	if (collsions.x < 0)
+		collsions.x = 0;
+
+	if (collsions.y < 0)
+		collsions.y = 0;
+
+	if (collsions.w > 9)
+		collsions.w = 9;
+
+	if (collsions.h > 7)
+		collsions.h = 7;
+
+
+	for (int i = collsions.x; i <= collsions.w; i++) {
+		for (int j = collsions.y; j <= collsions.h; j++) {
+			Tile* tile = &mapPtr[(j * 10) + i];
+
+			if (tile->exit) {
+				SwitchLevel(dat, npcModel, tile->exitLevel);
+				int moveTileX = 9 - (i + (i < 4 ? 1 : -1));
+				int moveTileY = j;
+
+				if (j <= 1 || j >= 6) {
+					moveTileY = 7 - (j + (j < 3 ? 1 : -1));
+				}
+
+				ply.position.vx = moveTileX << 10;
+				ply.position.vz = moveTileY << 10;
+
+				break;
+			}
+		}
+	}
 }

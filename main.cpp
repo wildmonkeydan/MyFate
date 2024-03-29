@@ -41,7 +41,6 @@ int main(int argc, const char **argv) {
 	ctx.setup(SCREEN_XRES, SCREEN_YRES, 0, 0, 0);
 
 
-
 	// CD stuff
 	CD cdHandler;
 	cdHandler.Init();
@@ -76,40 +75,19 @@ int main(int argc, const char **argv) {
 	SMD* npcModel = (SMD*)npcData;
 	smdInitData(npcModel);
 
-	Ground test(gameData.GetLevel(currentLevel));
-	NPC testNPC(gameData.GetNpc(0), npcModel);
+	Ground test(gameData, npcModel);
 
 	Player player = Player();
 
 	for (;;) {
 
 		player.Update(pad, cam);
+		test.Update(player, npcModel, gameData);
 
 		cam.Update(pad, ctx);
-		testNPC.Draw(ctx, cam);
-		test.Draw(ctx, screen_clip);
+		test.Draw(ctx, screen_clip, cam);
 		player.Draw(ctx, cam, screen_clip);
 		
-
-		if (levelChangeTimer >= 0) {
-			levelChangeTimer++;
-
-			if (levelChangeTimer > 30) {
-				levelChangeTimer = -1;
-			}
-		}
-
-		if (pad.IsButtonDown(PAD_START) && currentLevel < 8 && levelChangeTimer == -1) {
-			currentLevel++;
-			test = Ground(gameData.GetLevel(currentLevel));
-			levelChangeTimer++;
-		}
-
-		if (pad.IsButtonDown(PAD_SELECT) && currentLevel > 0 && levelChangeTimer == -1) {
-			currentLevel--;
-			test = Ground(gameData.GetLevel(currentLevel));
-			levelChangeTimer++;
-		}
 
 		// Draw some text in front of the square (Z = 0, primitives with higher
 		// Z indices are drawn first).

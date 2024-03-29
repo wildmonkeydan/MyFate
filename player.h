@@ -12,8 +12,9 @@ public:
 	Player();
 	void Update(Pad& pad, Camera& cam);
 	void Draw(RenderContext& ctx, Camera& cam, RECT& screen_clip);
-private:
+	
 	VECTOR position;
+private:	
 	SVECTOR rotation;
 
 	SVECTOR verts[4];
