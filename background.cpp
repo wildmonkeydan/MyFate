@@ -23,10 +23,10 @@ void Background::Draw(RenderContext& ctx) {
 		setRGB0(texQuad, 128, 128, 128);
 		setTPage(texQuad, 1, 1, 320, 0);
 		setClut(texQuad, 320, 480);
-		setUV4(texQuad, 0, 0, 256, 0, 0, 256, 256, 256);
-		setXY4(texQuad, 0, 0, 320, 0, 0, 256, 320, 256);
+		setUV4(texQuad, 0, 0, 255, 0, 0, 255, 255, 255);
+		setXY4(texQuad, 0, 0, 320, 0, 0, 255, 320, 255);
 
-		addPrim(ctx._buffers[ctx._active_buffer]._ot + 1024, texQuad);
+		addPrim(ctx._buffers[ctx._active_buffer]._ot + 4093, texQuad);
 
 		texQuad++;
 		ctx._next_packet = (uint8_t*)texQuad;
@@ -40,12 +40,12 @@ void Background::Draw(RenderContext& ctx) {
 		setXY0(sprite, 0, 0);
 		setClut(sprite, 320, 488);
 
-		addPrim(ctx._buffers[ctx._active_buffer]._ot + 1024, sprite);
+		addPrim(ctx._buffers[ctx._active_buffer]._ot + 4093, sprite);
 		sprite++;
 
 		tpage = (DR_TPAGE*)sprite;
 		setDrawTPage(tpage, 0, 1, getTPage(1, 0, 640, 256));
-		addPrim(ctx._buffers[ctx._active_buffer]._ot + 1024, tpage);
+		addPrim(ctx._buffers[ctx._active_buffer]._ot + 4093, tpage);
 		tpage++;
 
 		sprite = (SPRT*)tpage;
@@ -56,12 +56,12 @@ void Background::Draw(RenderContext& ctx) {
 		setXY0(sprite, 256, 0);
 		setClut(sprite, 320, 488);
 
-		addPrim(ctx._buffers[ctx._active_buffer]._ot + 1024, sprite);
+		addPrim(ctx._buffers[ctx._active_buffer]._ot + 4093, sprite);
 		sprite++;
 
 		tpage = (DR_TPAGE*)sprite;
 		setDrawTPage(tpage, 0, 1, getTPage(1, 0, 768, 256));
-		addPrim(ctx._buffers[ctx._active_buffer]._ot + 1024, tpage);
+		addPrim(ctx._buffers[ctx._active_buffer]._ot + 4093, tpage);
 		tpage++;
 
 		ctx._next_packet = (uint8_t*)tpage;

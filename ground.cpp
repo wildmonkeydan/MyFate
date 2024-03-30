@@ -4,7 +4,7 @@
 #include <inline_c.h>
 #include <stdlib.h>
 
-static constexpr Background::Type backgrounds[] = { Background::Type::Void, Background::Type::Void, Background::Type::Sky, Background::Type::Sky, Background::Type::Vapour, Background::Type::Void, Background::Type::Void, Background::Type::Void, Background::Type::Void };
+static constexpr Background::Type backgrounds[] = { Background::Type::Void, Background::Type::Void, Background::Type::Sky, Background::Type::Vapour, Background::Type::Sky, Background::Type::Void, Background::Type::Void, Background::Type::Void, Background::Type::Sky };
 
 Ground::Ground(Data& dat, SMD* npcModel) {
 	mapPtr = (Tile*)dat.GetLevel(0);
