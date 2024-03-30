@@ -4,6 +4,8 @@
 #include <inline_c.h>
 #include <stdlib.h>
 
+static constexpr Background::Type backgrounds[] = { Background::Type::Void, Background::Type::Void, Background::Type::Sky, Background::Type::Sky, Background::Type::Vapour, Background::Type::Void, Background::Type::Void, Background::Type::Void, Background::Type::Void };
+
 Ground::Ground(Data& dat, SMD* npcModel) {
 	mapPtr = (Tile*)dat.GetLevel(0);
 
@@ -73,7 +75,7 @@ void Ground::Draw(RenderContext& ctx, RECT& screen_clip, Camera& cam) {
 
 			setRGB0(poly, 128, 128, 128);
 			setTPage(poly, 1, 1, 640, 0);
-			setClut(poly, 640, 480);
+			setClut(poly, 320, 472);
 			setUV4(poly, mapPtr[(y * 10) + x].u, mapPtr[(y * 10) + x].v,
 				mapPtr[(y * 10) + x].u + 63, mapPtr[(y * 10) + x].v,
 				mapPtr[(y * 10) + x].u, mapPtr[(y * 10) + x].v + 63,
@@ -109,7 +111,7 @@ void Ground::SwitchLevel(Data& dat, SMD* npcModel, int level) {
 	}
 }
 
-void Ground::Update(Player& ply, SMD* npcModel, Data& dat) {
+void Ground::Update(Player& ply, SMD* npcModel, Data& dat, Background& back) {
 	RECT collsions;
 
 	collsions.x = ply.position.vx >> 10;
@@ -145,6 +147,8 @@ void Ground::Update(Player& ply, SMD* npcModel, Data& dat) {
 
 				ply.position.vx = moveTileX << 10;
 				ply.position.vz = moveTileY << 10;
+
+				back.SwitchType(backgrounds[tile->exitLevel]);
 
 				break;
 			}

@@ -12,7 +12,7 @@ project(
 )
 
 file(GLOB _sources *.cpp *.h)
-psn00bsdk_add_executable(hellocpp GPREL ${_sources} data.cpp data.h camera.cpp camera.h ground.cpp ground.h utils.cpp utils.h pad.cpp pad.h player.cpp player.h npc.cpp npc.h dialouge.cpp dialouge.h)
+psn00bsdk_add_executable(hellocpp GPREL ${_sources} data.cpp data.h camera.cpp camera.h ground.cpp ground.h utils.cpp utils.h pad.cpp pad.h player.cpp player.h npc.cpp npc.h dialouge.cpp dialouge.h background.cpp background.h)
 psn00bsdk_add_cd_image(hellocpp_iso hellocpp iso.xml DEPENDS hellocpp)
 
 install(FILES ${PROJECT_BINARY_DIR}/hellocpp.exe TYPE BIN)

@@ -16,6 +16,7 @@
 #include <cstdint>
 #include <cstdio>
 #include <psxgpu.h>
+#include <stdlib.h>
 
 #include "render.h"
 #include "cd.h"
@@ -25,6 +26,7 @@
 #include "utils.h"
 #include "player.h"
 #include "dialouge.h"
+#include "background.h"
 
 /* Main */
 
@@ -67,7 +69,18 @@ int main(int argc, const char **argv) {
 
 	// Loading files
 	TIM_IMAGE img;
-	LoadTexture((u_long*)cdHandler.LoadFile("\\TILES.TIM;1"), &img);
+
+	u_long* imgData = (u_long*)cdHandler.LoadFile("\\TILES.TIM;1");
+	LoadTexture(imgData, &img);
+	free(imgData);
+
+	imgData = (u_long*)cdHandler.LoadFile("\\SKY.TIM;1");
+	LoadTexture(imgData, &img);
+	free(imgData);
+
+	imgData = (u_long*)cdHandler.LoadFile("\\VAPOUR.TIM;1");
+	LoadTexture(imgData, &img);
+	free(imgData);
 
 	uint32_t* mainData = cdHandler.LoadFile("\\EXPORT.BIN;1");
 	Data gameData(mainData);
@@ -79,19 +92,22 @@ int main(int argc, const char **argv) {
 	Ground test(gameData, npcModel);
 	Dialouge dialouge(gameData.GetString(0));
 	Player player = Player();
+	Background back = Background();
 
 	dialouge.Talk(0);
 
 	for (;;) {
 
 		player.Update(pad, cam);
-		test.Update(player, npcModel, gameData);
+		test.Update(player, npcModel, gameData, back);
 		dialouge.Update(pad);
 
+		back.Draw(ctx);
 		cam.Update(pad, ctx);
 		test.Draw(ctx, screen_clip, cam);
 		player.Draw(ctx, cam, screen_clip);
 		dialouge.Draw(ctx);
+		
 		
 
 		// Draw some text in front of the square (Z = 0, primitives with higher

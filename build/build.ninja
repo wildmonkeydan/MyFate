@@ -49,6 +49,14 @@ cmake_ninja_workdir = C$:/PSn00bSDK/projects/MyFate/build/
 
 build cmake_object_order_depends_target_hellocpp: phony || CMakeFiles/hellocpp.dir
 
+build CMakeFiles/hellocpp.dir/background.cpp.obj: CXX_COMPILER__hellocpp_unscanned_Debug C$:/PSn00bSDK/projects/MyFate/background.cpp || cmake_object_order_depends_target_hellocpp
+  DEFINES = -DPSN00BSDK=1
+  DEP_FILE = CMakeFiles\hellocpp.dir\background.cpp.obj.d
+  FLAGS = -g -g -Wa,--strip-local-absolute -ffreestanding -fno-builtin -nostdlib -fdata-sections -ffunction-sections -fsigned-char -fno-strict-overflow -fdiagnostics-color=always -msoft-float -march=r3000 -mtune=r3000 -mabi=32 -mno-mt -mno-llsc -fno-exceptions -fno-rtti -fno-unwind-tables -fno-threadsafe-statics -fno-use-cxa-atexit -Og -mdivide-breaks -G8 -fno-pic -mno-abicalls -mgpopt -mno-extern-sdata
+  INCLUDES = -IC:/PSn00bSDK/lib/libpsn00b/cmake/../../../include/libpsn00b
+  OBJECT_DIR = CMakeFiles\hellocpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\hellocpp.dir
+
 build CMakeFiles/hellocpp.dir/camera.cpp.obj: CXX_COMPILER__hellocpp_unscanned_Debug C$:/PSn00bSDK/projects/MyFate/camera.cpp || cmake_object_order_depends_target_hellocpp
   DEFINES = -DPSN00BSDK=1
   DEP_FILE = CMakeFiles\hellocpp.dir\camera.cpp.obj.d
@@ -145,7 +153,7 @@ build CMakeFiles/hellocpp.dir/utils.cpp.obj: CXX_COMPILER__hellocpp_unscanned_De
 #############################################
 # Link the executable hellocpp.elf
 
-build hellocpp.elf hellocpp.exe hellocpp.map | ${cmake_ninja_workdir}hellocpp.exe ${cmake_ninja_workdir}hellocpp.map: CXX_EXECUTABLE_LINKER__hellocpp_Debug CMakeFiles/hellocpp.dir/camera.cpp.obj CMakeFiles/hellocpp.dir/cd.cpp.obj CMakeFiles/hellocpp.dir/data.cpp.obj CMakeFiles/hellocpp.dir/dialouge.cpp.obj CMakeFiles/hellocpp.dir/ground.cpp.obj CMakeFiles/hellocpp.dir/main.cpp.obj CMakeFiles/hellocpp.dir/npc.cpp.obj CMakeFiles/hellocpp.dir/pad.cpp.obj CMakeFiles/hellocpp.dir/player.cpp.obj CMakeFiles/hellocpp.dir/render.cpp.obj CMakeFiles/hellocpp.dir/utils.cpp.obj | C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxgpu_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxgte_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxspu_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxcd_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxpress_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxsio_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxetc_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxapi_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libsmd_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/liblzp_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libc_exe_gprel.a
+build hellocpp.elf hellocpp.exe hellocpp.map | ${cmake_ninja_workdir}hellocpp.exe ${cmake_ninja_workdir}hellocpp.map: CXX_EXECUTABLE_LINKER__hellocpp_Debug CMakeFiles/hellocpp.dir/background.cpp.obj CMakeFiles/hellocpp.dir/camera.cpp.obj CMakeFiles/hellocpp.dir/cd.cpp.obj CMakeFiles/hellocpp.dir/data.cpp.obj CMakeFiles/hellocpp.dir/dialouge.cpp.obj CMakeFiles/hellocpp.dir/ground.cpp.obj CMakeFiles/hellocpp.dir/main.cpp.obj CMakeFiles/hellocpp.dir/npc.cpp.obj CMakeFiles/hellocpp.dir/pad.cpp.obj CMakeFiles/hellocpp.dir/player.cpp.obj CMakeFiles/hellocpp.dir/render.cpp.obj CMakeFiles/hellocpp.dir/utils.cpp.obj | C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxgpu_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxgte_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxspu_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxcd_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxpress_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxsio_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxetc_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libpsxapi_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libsmd_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/liblzp_exe_gprel.a C$:/PSn00bSDK/lib/libpsn00b/debug/libc_exe_gprel.a
   FLAGS = -g
   LINK_FLAGS = -TC:\PSn00bSDK\lib\libpsn00b\cmake\..\ldscripts\exe.ld -nostdlib -Wl,-gc-sections -G8 -static
   LINK_LIBRARIES = -lgcc  C:/PSn00bSDK/lib/libpsn00b/debug/libpsxgpu_exe_gprel.a  C:/PSn00bSDK/lib/libpsn00b/debug/libpsxgte_exe_gprel.a  C:/PSn00bSDK/lib/libpsn00b/debug/libpsxspu_exe_gprel.a  C:/PSn00bSDK/lib/libpsn00b/debug/libpsxcd_exe_gprel.a  C:/PSn00bSDK/lib/libpsn00b/debug/libpsxpress_exe_gprel.a  C:/PSn00bSDK/lib/libpsn00b/debug/libpsxsio_exe_gprel.a  C:/PSn00bSDK/lib/libpsn00b/debug/libpsxetc_exe_gprel.a  C:/PSn00bSDK/lib/libpsn00b/debug/libpsxapi_exe_gprel.a  C:/PSn00bSDK/lib/libpsn00b/debug/libsmd_exe_gprel.a  C:/PSn00bSDK/lib/libpsn00b/debug/liblzp_exe_gprel.a  C:/PSn00bSDK/lib/libpsn00b/debug/libc_exe_gprel.a  -lgcc

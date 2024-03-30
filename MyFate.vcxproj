@@ -89,6 +89,7 @@ D:\Downloads\pcsx-redux-nightly-17936.20240219.9-x64\pcsx-redux.exe -iso "build/
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="background.cpp" />
     <ClCompile Include="build\cmakefiles\3.26.4\compileridcxx\CMakeCXXCompilerId.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cd.cpp" />
@@ -107,6 +108,7 @@ D:\Downloads\pcsx-redux-nightly-17936.20240219.9-x64\pcsx-redux.exe -iso "build/
     <None Include="build\hellocpp.bin" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="background.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="cd.h" />
     <ClInclude Include="data.h" />

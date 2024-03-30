@@ -5,6 +5,7 @@
 #include "render.h"
 #include "data.h"
 #include "player.h"
+#include "background.h"
 
 struct Tile {
 	unsigned char u;
@@ -16,7 +17,7 @@ struct Tile {
 class Ground {
 public:
 	Ground(Data& dat, SMD* npcModel);
-	void Update(Player& ply, SMD* npcModel, Data& dat);
+	void Update(Player& ply, SMD* npcModel, Data& dat, Background& back);
 	void Draw(RenderContext& ctx, RECT& screen_clip, Camera& cam);
 	void SwitchLevel(Data& dat, SMD* npcModel, int level);
 private:
