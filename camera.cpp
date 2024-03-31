@@ -25,7 +25,7 @@ Camera::Camera(VECTOR pos, VECTOR rot) {
 	gte_SetGeomScreen(CENTERX);
 
 	// Set light ambient color and light color matrix
-	gte_SetBackColor(0, 0, 0);
+	gte_SetBackColor(128, 128, 128);
 	gte_SetColorMatrix(&color_mtx);
 }
 

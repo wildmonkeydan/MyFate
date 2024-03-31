@@ -9,7 +9,6 @@ void Background::Update() {
 }
 
 void Background::Draw(RenderContext& ctx) {
-	POLY_FT4* texQuad;
 	SPRT* sprite;
 	DR_TPAGE* tpage;
 
@@ -17,19 +16,33 @@ void Background::Draw(RenderContext& ctx) {
 	case Type::Void:
 		break;
 	case Type::Sky:
-		texQuad = (POLY_FT4*)ctx._next_packet;
+		sprite = (SPRT*)ctx._next_packet;
+		setSprt(sprite);
+		setRGB0(sprite, 128, 128, 128);
+		setUV0(sprite, 0, 0);
+		setWH(sprite, 256, 256);
+		setXY0(sprite, 0, 0);
+		setClut(sprite, 320, 480);
 
-		setPolyFT4(texQuad);
-		setRGB0(texQuad, 128, 128, 128);
-		setTPage(texQuad, 1, 1, 320, 0);
-		setClut(texQuad, 320, 480);
-		setUV4(texQuad, 0, 0, 255, 0, 0, 255, 255, 255);
-		setXY4(texQuad, 0, 0, 320, 0, 0, 255, 320, 255);
+		addPrim(ctx._buffers[ctx._active_buffer]._ot + 4093, sprite);
+		sprite++;
 
-		addPrim(ctx._buffers[ctx._active_buffer]._ot + 4093, texQuad);
+		setSprt(sprite);
+		setRGB0(sprite, 128, 128, 128);
+		setUV0(sprite, 0, 0);
+		setWH(sprite, 64, 256);
+		setXY0(sprite, 256, 0);
+		setClut(sprite, 320, 480);
 
-		texQuad++;
-		ctx._next_packet = (uint8_t*)texQuad;
+		addPrim(ctx._buffers[ctx._active_buffer]._ot + 4093, sprite);
+		sprite++;
+
+		tpage = (DR_TPAGE*)sprite;
+		setDrawTPage(tpage, 0, 1, getTPage(1, 0, 320, 0));
+		addPrim(ctx._buffers[ctx._active_buffer]._ot + 4093, tpage);
+		tpage++;
+
+		ctx._next_packet = (uint8_t*)tpage;
 		break;
 	case Type::Vapour:
 		sprite = (SPRT*)ctx._next_packet;

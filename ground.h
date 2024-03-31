@@ -6,6 +6,7 @@
 #include "data.h"
 #include "player.h"
 #include "background.h"
+#include "dialouge.h"
 
 struct Tile {
 	unsigned char u;
@@ -16,10 +17,10 @@ struct Tile {
 
 class Ground {
 public:
-	Ground(Data& dat, SMD* npcModel);
-	void Update(Player& ply, SMD* npcModel, Data& dat, Background& back);
+	Ground(Data& dat, SMD* npcModel, SMD* questionModel);
+	void Update(Player& ply, SMD* npcModel, SMD* questionModel, Data& dat, Background& back, Dialouge& diag);
 	void Draw(RenderContext& ctx, RECT& screen_clip, Camera& cam);
-	void SwitchLevel(Data& dat, SMD* npcModel, int level);
+	void SwitchLevel(Data& dat, SMD* npcModel, SMD* question, int level);
 private:
 	Tile* mapPtr;
 	SVECTOR grid[9][11];

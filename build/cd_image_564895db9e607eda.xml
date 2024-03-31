@@ -56,6 +56,7 @@
       <file name="SKY.TIM" type="data" source="C:/PSn00bSDK/projects/MyFate/assets/sky.tim" />
       <file name="VAPOUR.TIM" type="data" source="C:/PSn00bSDK/projects/MyFate/assets/vaporwave.tim" />
       <file name="NPC.SMD" type="data" source="C:/PSn00bSDK/projects/MyFate/assets/NPC.smd" />
+      <file name="QUEST.SMD" type="data" source="C:/PSn00bSDK/projects/MyFate/assets/Quest.smd" />
       <!--
 				This file is only required if you are using dynamic linking
 				(see the system/dynlink example). It contains the executable's

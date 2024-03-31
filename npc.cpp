@@ -2,12 +2,14 @@
 
 #include <inline_c.h>
 
-NPC::NPC(NPCData* datPtr, SMD* smd) {
+NPC::NPC(NPCData* datPtr, SMD* smd, SMD* quest) {
 	data = datPtr;
 	model = smd;
+	question = quest;
 
 	setVector(&position, data->position.vx, data->position.vy + 256, data->position.vz);
 	setVector(&rotation, -1024, 0, 0);
+	setRECT(&collsion, position.vx - 1024, position.vz - 1024, 2048, 2048);
 
 	printf("NPC %d \n", data->general);
 }
@@ -34,11 +36,19 @@ void NPC::Draw(RenderContext& ctx, Camera& cam) {
 
 	ot.ot = ctx._buffers[ctx._active_buffer]._ot;
 	ot.otlen = DEFAULT_OT_LENGTH;
-	ot.zdiv = 0;
+	ot.zdiv = 1;
 	ot.zoff = 0;
 
 	ctx._next_packet = smdSortModel(&ot, ctx._next_packet, model);
+	if (playerNear) {
+		ctx._next_packet = smdSortModelFlat(ot.ot, ctx._next_packet, question);
+	}
 
 	// Restore matrix
 	PopMatrix();
+}
+
+bool NPC::IsNear(RECT& col) {
+	playerNear = CheckRecs(col, collsion);
+	return playerNear;
 }

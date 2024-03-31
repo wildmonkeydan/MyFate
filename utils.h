@@ -27,3 +27,5 @@ int quad_clip(RECT* clip, DVECTOR* v0, DVECTOR* v1, DVECTOR* v2, DVECTOR* v3);
 
 
 void LoadTexture(u_long* tim, TIM_IMAGE* tparam);
+
+bool CheckRecs(RECT& rec1, RECT& rec2);

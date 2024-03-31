@@ -9,13 +9,14 @@ static constexpr int PLAYER_SPEED = 1;
 
 class Player {
 public:
-	Player();
-	void Update(Pad& pad, Camera& cam);
+	Player(Pad* ppad);
+	void Update(Camera& cam);
 	void Draw(RenderContext& ctx, Camera& cam, RECT& screen_clip);
 	
 	VECTOR position;
+	RECT collision;
+	Pad* pad;
 private:	
 	SVECTOR rotation;
-
 	SVECTOR verts[4];
 };

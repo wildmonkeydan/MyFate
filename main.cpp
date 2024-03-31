@@ -89,17 +89,19 @@ int main(int argc, const char **argv) {
 	SMD* npcModel = (SMD*)npcData;
 	smdInitData(npcModel);
 
-	Ground test(gameData, npcModel);
-	Dialouge dialouge(gameData.GetString(0));
-	Player player = Player();
-	Background back = Background();
+	uint32_t* questData = cdHandler.LoadFile("\\QUEST.SMD;1");
+	SMD* questModel = (SMD*)questData;
+	smdInitData(questModel);
 
-	dialouge.Talk(0);
+	Ground test(gameData, npcModel, questModel);
+	Dialouge dialouge(gameData.GetString(0));
+	Player player = Player(&pad);
+	Background back = Background();
 
 	for (;;) {
 
-		player.Update(pad, cam);
-		test.Update(player, npcModel, gameData, back);
+		player.Update(cam);
+		test.Update(player, npcModel, questModel, gameData, back, dialouge);
 		dialouge.Update(pad);
 
 		back.Draw(ctx);

@@ -4,6 +4,7 @@
 
 #include "render.h"
 #include "camera.h"
+#include "utils.h"
 
 struct NPCData {
 	SVECTOR position;
@@ -16,13 +17,19 @@ struct NPCData {
 
 class NPC {
 public:
-	NPC(NPCData* datPtr, SMD* smd);
+	NPC(NPCData* datPtr, SMD* smd, SMD* quest);
 	void Draw(RenderContext& ctx, Camera& cam);
-private:
+	bool IsNear(RECT& col);
+	
 	NPCData* data;
+private:
 	SMD* model;
+	SMD* question;
 	SC_OT ot;
 
 	SVECTOR rotation;
 	VECTOR position;
+	RECT collsion;
+
+	bool playerNear = false;
 };

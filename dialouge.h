@@ -9,11 +9,12 @@ public:
 	void Update(Pad& pad);
 	void Draw(RenderContext& ctx);
 	void Talk(unsigned short offset);
+	bool talking = false;
 
 private:
 	char* strTable;
 
-	bool talking = false;
+	
 	bool lastSentence = false;
 	int progressTimer = 60;
 	unsigned short nextSentence = 0;

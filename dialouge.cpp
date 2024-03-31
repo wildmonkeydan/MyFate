@@ -9,7 +9,7 @@ Dialouge::Dialouge(char* table) {
 void Dialouge::Update(Pad& pad) {
 	if (talking) {
 		if (pad.IsButtonDown(PAD_CROSS) && progressTimer == 0) {
-			progressTimer = 30;
+			progressTimer = 60;
 
 			if (!lastSentence) {
 				Talk(nextSentence);
@@ -51,8 +51,7 @@ void Dialouge::Talk(unsigned short offset) {
 		iterator++;
 	}
 
-	if (*iterator == '%')
-		lastSentence = true;
+	lastSentence = *iterator == '%';
 
 	strncpy(dialouge, start, sentenceLength);
 	dialouge[sentenceLength] = '\0';

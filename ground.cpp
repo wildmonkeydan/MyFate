@@ -6,7 +6,7 @@
 
 static constexpr Background::Type backgrounds[] = { Background::Type::Void, Background::Type::Void, Background::Type::Sky, Background::Type::Vapour, Background::Type::Sky, Background::Type::Void, Background::Type::Void, Background::Type::Void, Background::Type::Sky };
 
-Ground::Ground(Data& dat, SMD* npcModel) {
+Ground::Ground(Data& dat, SMD* npcModel, SMD* questionModel) {
 	mapPtr = (Tile*)dat.GetLevel(0);
 
 	for (int y = 0; y < 9; y++) {
@@ -25,7 +25,7 @@ Ground::Ground(Data& dat, SMD* npcModel) {
 	}
 
 	for (int i = 0; i < numNpcs; i++) {
-		npcs[i] = NPC(dat.GetNpc(*(dat.GetLevel(0) + (321 + i))), npcModel);
+		npcs[i] = NPC(dat.GetNpc(*(dat.GetLevel(0) + (321 + i))), npcModel, questionModel);
 	}
 }
 
@@ -94,7 +94,7 @@ void Ground::Draw(RenderContext& ctx, RECT& screen_clip, Camera& cam) {
 	}
 }
 
-void Ground::SwitchLevel(Data& dat, SMD* npcModel, int level) {
+void Ground::SwitchLevel(Data& dat, SMD* npcModel, SMD* question, int level) {
 	mapPtr = (Tile*)dat.GetLevel(level);
 
 	free(npcs);
@@ -107,17 +107,18 @@ void Ground::SwitchLevel(Data& dat, SMD* npcModel, int level) {
 	}
 
 	for (int i = 0; i < numNpcs; i++) {
-		npcs[i] = NPC(dat.GetNpc(*(dat.GetLevel(0) + (321 + i))), npcModel);
+		npcs[i] = NPC(dat.GetNpc(*(dat.GetLevel(0) + (321 + i))), npcModel, question);
 	}
 }
 
-void Ground::Update(Player& ply, SMD* npcModel, Data& dat, Background& back) {
+void Ground::Update(Player& ply, SMD* npcModel, SMD* questionModel, Data& dat, Background& back, Dialouge& diag) {
 	RECT collsions;
 
-	collsions.x = ply.position.vx >> 10;
-	collsions.y = ply.position.vz >> 10;
-	collsions.w = (ply.position.vx + 512) >> 10;
-	collsions.h = (ply.position.vz + 512) >> 10;
+	collsions.x = ply.collision.x >> 10;
+	collsions.y = ply.collision.y >> 10;
+	collsions.w = (ply.collision.x + ply.collision.w) >> 10;
+	collsions.h = (ply.collision.y + ply.collision.h) >> 10;
+
 
 	if (collsions.x < 0)
 		collsions.x = 0;
@@ -137,7 +138,7 @@ void Ground::Update(Player& ply, SMD* npcModel, Data& dat, Background& back) {
 			Tile* tile = &mapPtr[(j * 10) + i];
 
 			if (tile->exit) {
-				SwitchLevel(dat, npcModel, tile->exitLevel);
+				SwitchLevel(dat, npcModel, questionModel, tile->exitLevel);
 				int moveTileX = 9 - (i + (i < 4 ? 1 : -1));
 				int moveTileY = j;
 
@@ -152,6 +153,12 @@ void Ground::Update(Player& ply, SMD* npcModel, Data& dat, Background& back) {
 
 				break;
 			}
+		}
+	}
+
+	for (int i = 0; i < numNpcs; i++) {
+		if (npcs[i].IsNear(ply.collision) && ply.pad->IsButtonDown(PAD_CROSS) && !diag.talking) {
+			diag.Talk(npcs[i].data->general);
 		}
 	}
 }

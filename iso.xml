@@ -56,6 +56,7 @@
       <file name="SKY.TIM" type="data" source="${PROJECT_SOURCE_DIR}/assets/sky.tim" />
       <file name="VAPOUR.TIM" type="data" source="${PROJECT_SOURCE_DIR}/assets/vaporwave.tim" />
       <file name="NPC.SMD" type="data" source="${PROJECT_SOURCE_DIR}/assets/NPC.smd" />
+      <file name="QUEST.SMD" type="data" source="${PROJECT_SOURCE_DIR}/assets/Quest.smd" />
       <!--
 				This file is only required if you are using dynamic linking
 				(see the system/dynlink example). It contains the executable's

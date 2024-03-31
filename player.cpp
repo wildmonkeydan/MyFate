@@ -3,7 +3,7 @@
 
 #include <inline_c.h>
 
-Player::Player() {
+Player::Player(Pad* ppad) {
 	setVector(&position, 4098, 128, 4098);
 	setVector(&rotation, 0, 0, 0);
 
@@ -11,10 +11,14 @@ Player::Player() {
 	setVector(&verts[3], 512, 0, 0);
 	setVector(&verts[1], 0, 0, 0);
 	setVector(&verts[2], 512, 512, 0);
+
+	setRECT(&collision, position.vx - 256, position.vz - 256, 512, 512);
+
+	pad = ppad;
 }
 
-void Player::Update(Pad& pad, Camera& cam) {
-	DVECTOR leftStick = pad.GetStick(LEFT_STICK);
+void Player::Update(Camera& cam) {
+	DVECTOR leftStick = pad->GetStick(LEFT_STICK);
 
 	position.vx += leftStick.vx >> PLAYER_SPEED;
 	position.vz += leftStick.vy >> PLAYER_SPEED;
@@ -33,6 +37,7 @@ void Player::Update(Pad& pad, Camera& cam) {
 		position.vz = 8192;
 	}
 
+	setRECT(&collision, position.vx - 256, position.vz - 256, 512, 512);
 	cam.position.vx = position.vx << 12;
 }
 
