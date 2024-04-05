@@ -5,6 +5,7 @@
 #define CENTERX			SCREEN_XRES>>1
 #define CENTERY			SCREEN_YRES>>1
 
+
 Camera::Camera(VECTOR pos, VECTOR rot) {
 	position = pos;
 	rotation = rot;
@@ -25,7 +26,7 @@ Camera::Camera(VECTOR pos, VECTOR rot) {
 	gte_SetGeomScreen(CENTERX);
 
 	// Set light ambient color and light color matrix
-	gte_SetBackColor(128, 128, 128);
+	gte_SetBackColor(64, 64, 64);
 	gte_SetColorMatrix(&color_mtx);
 }
 
@@ -37,7 +38,7 @@ void Camera::Update(Pad& pad, RenderContext& ctx) {
 	trot.vy = rotation.vy >> 12;
 	trot.vz = rotation.vz >> 12;
 
-
+#ifdef MANUAL_CAM
 	// Look controls
 	if (pad.IsButtonDown(PAD_UP)) {
 
@@ -115,17 +116,18 @@ void Camera::Update(Pad& pad, RenderContext& ctx) {
 		position.vz -= ((icos(trot.vy) * isin(trot.vx)) >> 12) << 2;
 
 	}
+#endif
 
-	FntPrint(-1, "X=%d Y=%d Z=%d\n",
+	/*FntPrint(-1, "X=%d Y=%d Z=%d\n",
 		position.vx >> 12,
 		position.vy >> 12,
 		position.vz >> 12);
-	/*FntPrint(-1, "RX=%d RY=%d\n",
+	FntPrint(-1, "RX=%d RY=%d\n",
 		rotation.vx >> 12,
 		rotation.vy >> 12);*/
 
 	// Flush text to drawing area
-	FntFlush(-1);
+	//FntFlush(-1);
 
 	// Set rotation to the matrix
 	RotMatrix(&trot, &mtx);

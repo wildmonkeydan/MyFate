@@ -27,6 +27,14 @@
 #include "player.h"
 #include "dialouge.h"
 #include "background.h"
+#include "item.h"
+
+enum class GameMode {
+	Intro,
+	Game,
+	Item,
+	End
+};
 
 /* Main */
 
@@ -64,10 +72,14 @@ int main(int argc, const char **argv) {
 	// PAD stuff
 	Pad pad = Pad();
 
-	FntOpen(0, 8, 320, 216, 0, 100);
+	//FntOpen(0, 8, 320, 216, 0, 100);
 
-
+	//
 	// Loading files
+	//
+
+	// Textures
+
 	TIM_IMAGE img;
 
 	u_long* imgData = (u_long*)cdHandler.LoadFile("\\TILES.TIM;1");
@@ -82,8 +94,12 @@ int main(int argc, const char **argv) {
 	LoadTexture(imgData, &img);
 	free(imgData);
 
+	// Data
+
 	uint32_t* mainData = cdHandler.LoadFile("\\EXPORT.BIN;1");
 	Data gameData(mainData);
+
+	// Models
 
 	uint32_t* npcData = cdHandler.LoadFile("\\NPC.SMD;1");
 	SMD* npcModel = (SMD*)npcData;
@@ -93,29 +109,58 @@ int main(int argc, const char **argv) {
 	SMD* questModel = (SMD*)questData;
 	smdInitData(questModel);
 
+	uint32_t* plyData = cdHandler.LoadFile("\\PLAY.SMD;1");
+	SMD* plyModel = (SMD*)plyData;
+	smdInitData(plyModel);
+
 	Ground test(gameData, npcModel, questModel);
 	Dialouge dialouge(gameData.GetString(0));
-	Player player = Player(&pad);
+	Player player = Player(&pad, plyModel);
 	Background back = Background();
+	Item item = Item(DialougeItem::None, cdHandler);
+
+
+	GameMode mode = GameMode::Game;
+	DialougeItem itemE = DialougeItem::None;
 
 	for (;;) {
+		switch (mode) {
 
-		player.Update(cam);
-		test.Update(player, npcModel, questModel, gameData, back, dialouge);
-		dialouge.Update(pad);
+		case GameMode::Game:
+			player.Update(cam);
+			test.Update(player, npcModel, questModel, gameData, back, dialouge);
+			itemE = dialouge.Update(pad);
 
-		back.Draw(ctx);
-		cam.Update(pad, ctx);
-		test.Draw(ctx, screen_clip, cam);
-		player.Draw(ctx, cam, screen_clip);
-		dialouge.Draw(ctx);
+			if (itemE != DialougeItem::None) {
+				item = Item(itemE, cdHandler);
+				mode = GameMode::Item;
+			}
+
+			back.Update();
+
+			back.Draw(ctx);
+			cam.Update(pad, ctx);
+			test.Draw(ctx, screen_clip, cam);
+			player.Draw(ctx, cam, screen_clip);
+			dialouge.Draw(ctx);
+
+			// Draw some text in front of the square (Z = 0, primitives with higher
+			// Z indices are drawn first).
+			//ctx.draw_text(8, 16, 0, "sfssdsfsggsiufsiuefiufigwiugfiusuguas\nusgfuiegfiugsfgsiegui");
+
+			break;
+
+		case GameMode::Item:
+			if (item.Update(pad)) {
+				mode = GameMode::Game;
+				player.AddItem(item.Give());
+			}
+
+			item.Draw(ctx);
+
+			break;
+		}
 		
-		
-
-		// Draw some text in front of the square (Z = 0, primitives with higher
-		// Z indices are drawn first).
-		//ctx.draw_text(8, 16, 0, "sfssdsfsggsiufsiuefiufigwiugfiusuguas\nusgfuiegfiugsfgsiegui");
-
 		ctx.flip();
 	}
 

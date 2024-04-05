@@ -3,12 +3,19 @@
 #include "render.h"
 #include "pad.h"
 
+enum class DialougeItem : unsigned char {
+	None,
+	Ring,
+	Bracelet,
+	Coin
+};
+
 class Dialouge {
 public:
 	Dialouge(char* table);
-	void Update(Pad& pad);
+	DialougeItem Update(Pad& pad);
 	void Draw(RenderContext& ctx);
-	void Talk(unsigned short offset);
+	DialougeItem Talk(unsigned short offset);
 	bool talking = false;
 
 private:

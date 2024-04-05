@@ -58,3 +58,7 @@ DVECTOR Pad::GetStick(int stick) {
 
 	return out;
 }
+
+bool Pad::IsFaceButtonDown() {
+	return IsButtonDown(PAD_CIRCLE) || IsButtonDown(PAD_CROSS) || IsButtonDown(PAD_SQUARE) || IsButtonDown(PAD_TRIANGLE);
+}

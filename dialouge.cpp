@@ -1,18 +1,20 @@
 #include "dialouge.h"
 
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 Dialouge::Dialouge(char* table) {
 	strTable = table;
 }
 
-void Dialouge::Update(Pad& pad) {
+DialougeItem Dialouge::Update(Pad& pad) {
 	if (talking) {
 		if (pad.IsButtonDown(PAD_CROSS) && progressTimer == 0) {
 			progressTimer = 60;
 
 			if (!lastSentence) {
-				Talk(nextSentence);
+				return Talk(nextSentence);
 			}
 			else {
 				talking = false;
@@ -23,6 +25,8 @@ void Dialouge::Update(Pad& pad) {
 			progressTimer--;
 		}
 	}
+
+	return DialougeItem::None;
 }
 
 void Dialouge::Draw(RenderContext& ctx) {
@@ -38,8 +42,10 @@ void Dialouge::Draw(RenderContext& ctx) {
 	}
 }
 
-void Dialouge::Talk(unsigned short offset) {
+DialougeItem Dialouge::Talk(unsigned short offset) {
 	talking = true;
+	
+	printf("%d\n", offset);
 
 	char* start = strTable + offset;
 	char* iterator = start;
@@ -57,4 +63,23 @@ void Dialouge::Talk(unsigned short offset) {
 	dialouge[sentenceLength] = '\0';
 
 	nextSentence = offset + (sentenceLength + 1);
+
+	DialougeItem item;
+
+	switch (*start) {
+	case '^':
+		item = DialougeItem::Ring;
+		break;
+	case '#':
+		item = DialougeItem::Bracelet;
+		break;
+	case '~':
+		item = DialougeItem::Coin;
+		break;
+	default:
+		item = DialougeItem::None;
+		break;
+	}
+
+	return item;
 }

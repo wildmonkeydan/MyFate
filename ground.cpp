@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 static constexpr Background::Type backgrounds[] = { Background::Type::Void, Background::Type::Void, Background::Type::Sky, Background::Type::Vapour, Background::Type::Sky, Background::Type::Void, Background::Type::Void, Background::Type::Void, Background::Type::Sky };
+static constexpr unsigned char ambientLighting[] = { 64, 64, 128, 128, 128, 96, 96, 96, 128 };
 
 Ground::Ground(Data& dat, SMD* npcModel, SMD* questionModel) {
 	mapPtr = (Tile*)dat.GetLevel(0);
@@ -18,7 +19,6 @@ Ground::Ground(Data& dat, SMD* npcModel, SMD* questionModel) {
 	}
 
 	numNpcs = *(dat.GetLevel(0) + 320);
-	printf("%d", numNpcs);
 
 	if (numNpcs != 0) {
 		npcs = (NPC*)malloc(sizeof(NPC) * numNpcs);
@@ -73,13 +73,14 @@ void Ground::Draw(RenderContext& ctx, RECT& screen_clip, Camera& cam) {
 			gte_avsz4();
 			gte_stotz(&p);
 
-			setRGB0(poly, 128, 128, 128);
+			setRGB0(poly, ambientLighting[currentRoom], ambientLighting[currentRoom], ambientLighting[currentRoom]);
 			setTPage(poly, 1, 1, 640, 0);
 			setClut(poly, 320, 472);
 			setUV4(poly, mapPtr[(y * 10) + x].u, mapPtr[(y * 10) + x].v,
 				mapPtr[(y * 10) + x].u + 63, mapPtr[(y * 10) + x].v,
 				mapPtr[(y * 10) + x].u, mapPtr[(y * 10) + x].v + 63,
 				mapPtr[(y * 10) + x].u + 63, mapPtr[(y * 10) + x].v + 63);
+
 
 			addPrim(ctx._buffers[ctx._active_buffer]._ot + p, poly);
 			poly++;
@@ -100,15 +101,19 @@ void Ground::SwitchLevel(Data& dat, SMD* npcModel, SMD* question, int level) {
 	free(npcs);
 
 	numNpcs = *(dat.GetLevel(level) + 320);
-	printf("%d", numNpcs);
+	//printf("%d", numNpcs);
 
 	if (numNpcs != 0) {
 		npcs = (NPC*)malloc(sizeof(NPC) * numNpcs);
 	}
 
 	for (int i = 0; i < numNpcs; i++) {
-		npcs[i] = NPC(dat.GetNpc(*(dat.GetLevel(0) + (321 + i))), npcModel, question);
+		printf("%d\n", *(dat.GetLevel(level) + (321 + i)));
+		npcs[i] = NPC(dat.GetNpc(*(dat.GetLevel(level) + (321 + i))), npcModel, question);
 	}
+
+	currentRoom = level;
+	gte_SetBackColor(ambientLighting[currentRoom], ambientLighting[currentRoom], ambientLighting[currentRoom]);
 }
 
 void Ground::Update(Player& ply, SMD* npcModel, SMD* questionModel, Data& dat, Background& back, Dialouge& diag) {
@@ -139,11 +144,22 @@ void Ground::Update(Player& ply, SMD* npcModel, SMD* questionModel, Data& dat, B
 
 			if (tile->exit) {
 				SwitchLevel(dat, npcModel, questionModel, tile->exitLevel);
-				int moveTileX = 9 - (i + (i < 4 ? 1 : -1));
-				int moveTileY = j;
+				int moveTileX = i;
+				int moveTileY = j + 1;
 
-				if (j <= 1 || j >= 6) {
-					moveTileY = 7 - (j + (j < 3 ? 1 : -1));
+				if (j == 0) {
+					moveTileY = 5;
+				}
+				else if (j == 7) {
+					moveTileY = 2;
+				}
+
+				if (i == 0) {
+					moveTileX = 7;
+				}
+				else if (i == 9)
+				{
+					moveTileX = 2;
 				}
 
 				ply.position.vx = moveTileX << 10;
@@ -157,8 +173,8 @@ void Ground::Update(Player& ply, SMD* npcModel, SMD* questionModel, Data& dat, B
 	}
 
 	for (int i = 0; i < numNpcs; i++) {
-		if (npcs[i].IsNear(ply.collision) && ply.pad->IsButtonDown(PAD_CROSS) && !diag.talking) {
-			diag.Talk(npcs[i].data->general);
+		if (npcs[i].IsNear(ply.collision) && ply.pad->IsFaceButtonDown() && !diag.talking) {
+			diag.Talk(npcs[i].GetDialougeOffset(*ply.pad));
 		}
 	}
 }

@@ -10,6 +10,7 @@ public:
 	Pad();
 	bool IsButtonDown(PadButton btn);
 	DVECTOR GetStick(int stick);
+	bool IsFaceButtonDown();
 private:
 	char pad_buff[2][34];
 };

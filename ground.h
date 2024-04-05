@@ -27,4 +27,6 @@ private:
 
 	NPC* npcs = nullptr;
 	unsigned char numNpcs = 0;
+	
+	unsigned char currentRoom = 0;
 };

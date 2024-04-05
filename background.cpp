@@ -5,7 +5,21 @@ Background::Background() {
 }
 
 void Background::Update() {
+	switch (current) {
+	case Type::Sky:
+		if (scrollTime == 0) {
+			scrollTime = 2;
 
+			skyScroll++;
+
+			if (skyScroll >= 256) {
+				skyScroll = 0;
+			}
+		}
+		else {
+			scrollTime--;
+		}
+	}
 }
 
 void Background::Draw(RenderContext& ctx) {
@@ -19,7 +33,7 @@ void Background::Draw(RenderContext& ctx) {
 		sprite = (SPRT*)ctx._next_packet;
 		setSprt(sprite);
 		setRGB0(sprite, 128, 128, 128);
-		setUV0(sprite, 0, 0);
+		setUV0(sprite, skyScroll, 0);
 		setWH(sprite, 256, 256);
 		setXY0(sprite, 0, 0);
 		setClut(sprite, 320, 480);
@@ -29,7 +43,7 @@ void Background::Draw(RenderContext& ctx) {
 
 		setSprt(sprite);
 		setRGB0(sprite, 128, 128, 128);
-		setUV0(sprite, 0, 0);
+		setUV0(sprite, skyScroll, 0);
 		setWH(sprite, 64, 256);
 		setXY0(sprite, 256, 0);
 		setClut(sprite, 320, 480);

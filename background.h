@@ -15,4 +15,6 @@ public:
 	void SwitchType(Type swit);
 private:
 	Type current;
+	short skyScroll = 0;
+	unsigned char scrollTime = 1;
 };

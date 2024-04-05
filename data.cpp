@@ -20,7 +20,6 @@ Data::Data(uint32_t* basePointer) {
 
 		numObject = *(tempPtr + offset);
 
-
 		offset += 1 + (numObject);
 
 		levels[i + 1] = levels[i] + offset;

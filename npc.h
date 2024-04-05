@@ -20,6 +20,7 @@ public:
 	NPC(NPCData* datPtr, SMD* smd, SMD* quest);
 	void Draw(RenderContext& ctx, Camera& cam);
 	bool IsNear(RECT& col);
+	unsigned short GetDialougeOffset(Pad& pad);
 	
 	NPCData* data;
 private:

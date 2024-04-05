@@ -96,6 +96,7 @@ D:\Downloads\pcsx-redux-nightly-17936.20240219.9-x64\pcsx-redux.exe -iso "build/
     <ClCompile Include="data.cpp" />
     <ClCompile Include="dialouge.cpp" />
     <ClCompile Include="ground.cpp" />
+    <ClCompile Include="item.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="npc.cpp" />
     <ClCompile Include="pad.cpp" />
@@ -114,6 +115,7 @@ D:\Downloads\pcsx-redux-nightly-17936.20240219.9-x64\pcsx-redux.exe -iso "build/
     <ClInclude Include="data.h" />
     <ClInclude Include="dialouge.h" />
     <ClInclude Include="ground.h" />
+    <ClInclude Include="item.h" />
     <ClInclude Include="npc.h" />
     <ClInclude Include="object.h" />
     <ClInclude Include="pad.h" />

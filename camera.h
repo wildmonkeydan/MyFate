@@ -23,7 +23,7 @@ private:
 
 	MATRIX color_mtx = {
 	ONE, 0, 0,	// Red
-	0, 0, 0,	// Green
+	ONE, 0, 0,	// Green
 	ONE, 0, 0	// Blue
 	};
 };
